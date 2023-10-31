@@ -2,7 +2,7 @@ name: Build - GitHub Pages Astro CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   workflow_dispatch:
 
 permissions:

@@ -1,28 +1,8 @@
 ---
-import '../styles/global.css';
-import Header from "../components/Header.astro";
-
-const headerColor = "navy";
+import "../styles/global.css";
+import BaseLayout from "../layouts/base.astro";
 ---
 
-
-<style define:vars={{headerColor}}>
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        color: white;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-
-    h1 {
-        font-size: 4rem;
-        color: var(--headerColor);
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: 1em;
-    }
-</style>
+<BaseLayout pageTitle={"Mu Flower"}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
