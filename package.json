@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:page": "pnpm build && git add . && git commit -m '//' && git subtree push --prefix dist Web gh-pages"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
