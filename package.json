@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.3.0",
     "astro": "^3.4.0",
+    "pnpm": "^8.10.0",
     "typescript": "^5.2.2"
   }
 }
