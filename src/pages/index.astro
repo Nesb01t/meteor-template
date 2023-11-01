@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/base.astro";
+import Header from "../components/header.astro";
+import {Image} from 'astro:assets';
+import cardBkg from "../assets/about.jpg"
+---
+
+<BaseLayout pageTitle={"Nesb01t"}>
+	<Header></Header>
+	<div class="about flex justify-center">
+		<div class="m-12 p-8 rounded-lg shadow-md shadow-slate-500 ">
+			<div style="">
+				<h1>ABOUT ME</h1>
+				<p>数字媒体技术专业，前端 & 游戏开发。</p>
+				<p>博客笔记归档 @ <a href="https://blog.csdn.net/Littlelumos">Nesb01t's CSDN</a></p>
+				<p>熟悉前端框架 Vue2、Vue3，了解 React、Uni-app/Flutter</p>
+				<p>熟悉前端组件库 Element Plus、Element UI、Tailwind CSS，了解 uView</p>
+
+				<h2>业余时间折腾过许多</h2>
+				<ul>
+					<li>· 编程语言：js、ts、python、c#、dart、lua、java...</li>
+					<li>· 开发框架：spring、flutter、astro、unity、electron、express、koa...</li>
+					<li>· 游戏插件：minecraft、world of warcraft、final fantasy XIV</li>
+					<li>· 其他的：docker、wordpress、halo、opengl、web 爬虫、二进制安全</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="m-12 p-8 rounded-lg shadow-md shadow-slate-500">
+			<h2>一些项目落地的技术选型</h2>
+			<ul>
+				<li>· 此博客：Astro + Tailwind (github action + page 自动化部署)</li>
+				<li>· 游戏服务器开发 (MineCraft)：Spigot + Kotlin lib + Maven</li>
+				<li>· 游戏安全工具链：C# + dotNET / WPF + dnSpy + IDA Pro</li>
+				<li>· EachStar 社区：Vue2 + ElementPlus + Koa + TS + Postgres</li>
+			</ul>
+		</div>
+	</div>
+</BaseLayout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+
+  .about {
+    background: url("../assets/about.png");
+    height: 1500px;
+  }
+
+  .about a {
+    color: #5873bb;
+  }
+
+  .about h1 {
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+
+    font-size: 4.25rem;
+    font-weight: bolder;
+    font-family: 'Noto Serif SC', serif;
+
+    color: #4d5392;
+  }
+
+  .about h2 {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    font-size: 1.5rem;
+    font-family: 'Noto Serif SC', serif;
+
+    color: #6577b0;
+  }
+
+  .about p, .about li {
+    margin-left: 3.5rem;
+    margin-right: 3rem;
+    line-height: 2rem;
+
+    font-size: 16px;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .about > div {
+    background-color: white;
+    height: fit-content;
+  }
+</style>
