@@ -1,0 +1,11 @@
+.yellow-linear {
+  background-image: -webkit-linear-gradient(bottom, #c8430b, #ebe4ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-linear {
+  background-image: -webkit-linear-gradient(bottom, #43567e, #a6c0e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
