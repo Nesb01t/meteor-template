@@ -5,27 +5,44 @@ import {Image} from 'astro:assets';
 import myImage from "../assets/nesb01t-bkg.png"
 ---
 
-<header class="title bg-cover">
-	<div class="title-blur">
-		<nav>
-			<Hamburger/>
-			<Navigation/>
-		</nav>
+<header class="title-bkg bg-cover">
+	<div class="title flex flex-col items-center">
+		<!--<nav>-->
+		<!--	<Hamburger/>-->
+		<!--	<Navigation/>-->
+		<!--</nav>-->
+		<h1 class="mt-36">Blog - Nesb01t</h1>
+		<p class="mt-12">生如夏花之绚烂，死如秋叶之静美。</p>
 	</div>
 </header>
 
 <style>
-  .title {
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Long+Cang&family=Noto+Serif+SC&display=swap');
+
+  .title-bkg {
     background-image: url("../assets/nesb01t-bkg.png");
-    min-height: 600px;
   }
 
-  .title-blur {
+  .title {
     backdrop-filter: blur(2px);
     min-height: 600px;
   }
 
-  .expanded {
-    display: unset;
+  .title h1 {
+    font-size: 4.75rem;
+    letter-spacing: 5px;
+    font-family: "Agbalumo", serif;
+    color: aliceblue;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  .title p {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    font-family: "Long Cang", serif;
+    color: white;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   }
 </style>
