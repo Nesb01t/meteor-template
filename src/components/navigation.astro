@@ -3,7 +3,38 @@
 ---
 
 <div class="nav-links">
-  <a href="/">首页</a>
-  <a href="/muflower/">木花</a>
-  <a href="/nesb01t/">Nesb01t</a>
+	<a href="/">首页 INDEX</a>
 </div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+
+  .nav-links {
+    backdrop-filter: blur(6px);
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: "Noto Serif SC", serif;
+    color: aliceblue;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
+
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  }
+</style>

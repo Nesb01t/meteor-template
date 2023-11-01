@@ -1,11 +1,31 @@
 ---
 import Navigation from "./navigation.astro";
 import Hamburger from "./hamburger.astro";
+import {Image} from 'astro:assets';
+import myImage from "../assets/nesb01t-bkg.png"
 ---
 
-<header>
-  <nav>
-    <Hamburger />
-    <Navigation />
-  </nav>
+<header class="title bg-cover">
+	<div class="title-blur">
+		<nav>
+			<Hamburger/>
+			<Navigation/>
+		</nav>
+	</div>
 </header>
+
+<style>
+  .title {
+    background-image: url("../assets/nesb01t-bkg.png");
+    min-height: 600px;
+  }
+
+  .title-blur {
+    backdrop-filter: blur(2px);
+    min-height: 600px;
+  }
+
+  .expanded {
+    display: unset;
+  }
+</style>
