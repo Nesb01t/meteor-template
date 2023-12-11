@@ -3,5 +3,64 @@ import LayoutCommon from '../layouts/layout-common.astro'
 ---
 
 <LayoutCommon>
-  <div>你好</div>
+	<div id="about" class="things-block">
+		<h1>关于这个博客🎳</h1>
+		<p>我想许多人搭建博客的初衷都是构建一个网络日志，还能学到许多前端知识，何乐而不为？</p>
+		<p>无独有偶，站点基于 <a href="https://astro.build/" target="_blank">Astro.js</a> 搭建，几乎没有外部库，保证了极致的
+			<b>精简快速</b></p>
+		<p style="margin-top: 20px"><b>Technology involved:</b><span>Astro.js</span><span>TailwindCSS</span><a
+			href="https://github.com/Nesb01t/meteor-template" target="_blank"><span>SourceCode @Github</span></a>
+		</p>
+	</div>
+	<div id="frontend" class="things-block">
+		<h1>WEB 前端</h1>
+	</div>
+	<div id="gameplay" class="things-block">
+		<h1>Gameplay 开发</h1>
+	</div>
 </LayoutCommon>
+
+<style>
+  .things-block {
+    height: 100vh;
+    padding-top: 5rem;
+    border-top: rgba(54, 49, 38, 0.3) 2px dashed;;
+    background-color: rgb(246, 226, 228);
+  }
+
+  .things-block h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .things-block p {
+    position: relative;
+
+    font-size: 1.25rem;
+    max-width: 80vw;
+    margin-left: 10vw;
+    text-align: center;
+  }
+
+  .things-block a {
+    color: steelblue;
+  }
+
+  .things-block span {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    background-color: rgba(143, 151, 114, 0.3);
+  }
+
+  .things-block a span {
+    color: whitesmoke;
+    background-color: black;
+  }
+
+	.things-block a span:hover {
+		color: steelblue;
+	}
+</style>

@@ -3,8 +3,23 @@
 ---
 <nav class="nav-bar">
 	<ul class="nav-bar-list">
-		<li><a href="/">首页</a></li>
-		<li><a href="/">期待更多</a></li>
+		<a href="#">
+			<li>首页</li>
+		</a>
+		<a href="#about">
+			<li>关于</li>
+		</a>
+		<a href="#frontend">
+			<li>前端</li>
+		</a>
+		<a href="#gameplay">
+			<li>Gameplay</li>
+		</a>
+		<div class="nav-bar-right">
+			<a href="https://github.com/Nesb01t" target="_blank">
+				<li>Github</li>
+			</a>
+		</div>
 	</ul>
 </nav>
 
@@ -13,19 +28,18 @@
   @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
   .nav-bar {
-    position: sticky;
+    position: fixed;
     width: 100%;
+		z-index: 3;
 
     box-shadow: 0 0 3px black;
 
     /* 毛玻璃 */
-    background: rgba(255, 255, 255, .1);
+    background: rgba(35, 35, 35, 0.33);
     backdrop-filter: blur(6px)
   }
 
   .nav-bar-list {
-    width: 100%;
-
     display: flex;
   }
 
@@ -36,9 +50,17 @@
     font-family: 'Noto Serif SC', serif;
     font-size: 1.75rem;
     padding: 0.5em 2em;
+		text-align: center;
 
-		border-right: #64748b 2px solid;
+    border-right: rgba(82, 95, 141, 0.35) 2px solid;
   }
 
+	.nav-bar-list li:hover {
+		background: rgba(82, 95, 141, 0.35);
+	}
 
+  .nav-bar-right {
+    margin-left: auto;
+		border-right: none;
+  }
 </style>
