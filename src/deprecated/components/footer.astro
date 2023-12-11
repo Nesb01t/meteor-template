@@ -1,0 +1,54 @@
+---
+import {Icon} from 'astro-iconify';
+---
+
+<footer class="h-28 w-full text-center striped-background flex-col items-center">
+	<div class="title text-xl p-4">NESB01T</div>
+	<div class="link-group flex items-center justify-center">
+		<span class="mr-2 text-stone-500">Please do not reprint without any permission. Social links: </span>
+		<a href="http://github.com/nesb01t">
+			<Icon name="bi:github"></Icon>
+		</a>
+		<a href="https://blog.csdn.net/Littlelumos">
+			<Icon name="logos:blogger"></Icon>
+		</a>
+	</div>
+</footer>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+  footer {
+    margin-top: -8rem;
+    height: 8rem;
+  }
+
+  .striped-background {
+    background-color: #f2f2f2;
+    background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.5) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.5) 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 40px 40px;
+  }
+
+  .title {
+    font-family: 'Edu TAS Beginner', serif;
+  }
+
+  .link-group {
+    font-family: 'Signika Negative', serif;
+  }
+
+  [astro-icon] {
+    width: 30px;
+    margin: 3px;
+  }
+</style>

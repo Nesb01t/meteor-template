@@ -1,0 +1,56 @@
+---
+import NavBar from '../components/nav-bar.astro'
+---
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>treemywordeye</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="common-header">
+	<NavBar></NavBar>
+	<div class="bkg-content">
+		<h1 class="bkg-content-header">👋你好啊~ Nesb01t 参上</h1>
+		<p style="margin-top: 10px">欢迎你造访我的博客，数媒在读大三一枚</p>
+	</div>
+</header>
+</body>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .common-header {
+    height: 100vh;
+    position: relative;
+    background-image: url("../assets/island-bkg.png");
+    background-size: cover;
+  }
+
+  .bkg-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 30%;
+    bottom: 40%;
+    left: 10%;
+    right: 40%;
+  }
+
+  .bkg-content-header {
+    font-size: 2.5rem;
+    text-shadow: #9dbce8 0 0 8px;
+		letter-spacing: 0.5rem;
+  }
+</style>
