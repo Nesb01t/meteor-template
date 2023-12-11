@@ -1,5 +1,6 @@
 ---
 import NavBar from '../components/nav-bar.astro'
+import SnowContainer from '../components/snow-container.astro'
 ---
 <!doctype html>
 <html lang="zh-cn">
@@ -14,9 +15,11 @@ import NavBar from '../components/nav-bar.astro'
 <body>
 <header class="common-header">
 	<NavBar></NavBar>
+	<SnowContainer></SnowContainer>
 	<div class="bkg-content">
 		<h1 class="bkg-content-header">👋你好啊~ Nesb01t 参上</h1>
-		<p style="margin-top: 10px">欢迎你造访我的博客，数媒在读大三一枚</p>
+		<p style="margin-top: 5px">欢迎你造访我的博客，数媒在读大三，热爱 Elixir，前端 & Gameplay 开发</p>
+		<p>请下划查看更多内容~</p>
 	</div>
 </header>
 </body>
@@ -42,15 +45,17 @@ import NavBar from '../components/nav-bar.astro'
     align-items: center;
 
     position: absolute;
-    top: 30%;
+    top: 25%;
     bottom: 40%;
     left: 10%;
     right: 40%;
+
+		font-size: 1.25rem;
   }
 
   .bkg-content-header {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-shadow: #9dbce8 0 0 8px;
-		letter-spacing: 0.5rem;
+    letter-spacing: 0.5rem;
   }
 </style>
