@@ -1,3 +1,8 @@
+---
+title: 'meteor-template 博客白皮书'
+tag: 'astro'
+---
+
 ### 图标用法
 
 1. 参考第三方 astro-icon 包

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/base/index.astro';
+import { getBaseName } from '../utils/route';
 
 export const getStaticPaths = async () => {
   const getBaseName = (path: string) => {
@@ -18,9 +19,27 @@ export const getStaticPaths = async () => {
   }));
 };
 
-const { Content } = Astro.props.post;
+const { Content, file, frontmatter } = Astro.props.post;
+
+// get the post info
+const title = getBaseName(file);
+const tag = frontmatter.tag;
 ---
 
 <BaseLayout>
-  <Content />
+  <h1 class="text-3xl font-bold mb-4">{title}</h1>
+  <div class="text-gray-500 mb-4 flex items-center">
+    <div class="badge badge-ghost badge-sm">{tag}</div>
+  </div>
+  <div class="article">
+    <div class="card-body">
+      <Content />
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+    .article {
+        @apply w-full card shadow-xl rounded-xl;
+    }
+</style>

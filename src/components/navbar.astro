@@ -3,12 +3,12 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <div class="navbar-wrapper">
-  <div class="navbar rounded-lg backdrop-blur shadow-xl">
+  <div class="navbar rounded-lg backdrop-blur shadow">
     <div class="flex-1">
       <button class="btn glass">
         <Icon name="mage:note-fill" />
         <span class="navbar__title">nesb01t</span>
-        <span class="navbar__subtitle">web & game buffs</span>
+        <div class="navbar__subtitle">web & game buffs</div>
       </button>
     </div>
     <div class="flex-none gap-2">
@@ -32,6 +32,12 @@ import { Icon } from 'astro-icon/components';
     }
 
     .navbar__subtitle {
-        @apply text-primary;
+        @apply text-primary font-light;
+    }
+
+    @media (max-width: 800px) {
+        .navbar__subtitle {
+            @apply hidden;
+        }
     }
 </style>
