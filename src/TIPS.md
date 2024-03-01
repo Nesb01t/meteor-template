@@ -17,3 +17,6 @@ interface IconProps {
 ### daisyUI
 
 主题配置文件 `tailwind.config.js` 中配置
+
+- badge 分类
+- card 文章内容, project
