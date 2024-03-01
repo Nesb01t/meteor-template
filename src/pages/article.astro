@@ -11,8 +11,9 @@ const articles = parseArticles(posts);
 <BaseLayout>
   <div class="name">
     {articles.map((a) =>
-      a.title)}
-    | {articles.map((a) => a.content)}
+      (
+        <a href={a.title}>{a.title}</a>
+      ))}
   </div>
 </BaseLayout>
 

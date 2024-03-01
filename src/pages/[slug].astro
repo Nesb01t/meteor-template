@@ -1,4 +1,6 @@
 ---
+import BaseLayout from '../layouts/base/index.astro';
+
 export const getStaticPaths = async () => {
   const getBaseName = (path: string) => {
     return path.split('/').pop().split('.').shift();
@@ -19,4 +21,6 @@ export const getStaticPaths = async () => {
 const { Content } = Astro.props.post;
 ---
 
-<Content />
+<BaseLayout>
+  <Content />
+</BaseLayout>
