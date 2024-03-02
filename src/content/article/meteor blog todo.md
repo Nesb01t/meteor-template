@@ -7,6 +7,7 @@ date: '2024-3-2'
 
 - [ ] 支持 blockquote
 - [ ] 支持 tag 分类筛选
+- [ ] articles tag 方便增加
 
 ### 计划中
 
