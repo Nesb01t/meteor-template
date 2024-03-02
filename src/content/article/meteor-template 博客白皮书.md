@@ -1,5 +1,4 @@
 ---
-title: 'meteor-template 博客白皮书'
 tag: 'astro'
 ---
 

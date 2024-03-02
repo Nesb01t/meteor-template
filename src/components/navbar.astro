@@ -12,15 +12,21 @@ import { Icon } from 'astro-icon/components';
       </button>
     </div>
     <div class="flex-none gap-2">
-      <a class="btn btn-ghost" href="/article">
-        <Icon name="mage:folder-2-fill" />
-        article</a>
-      <a class="btn btn-ghost" href="/project">
-        <Icon name="mage:box-3d-fill" />
-        project</a>
-      <a class="btn btn-ghost" href="/about">
-        <Icon name="mage:water-drop-fill" />
-        about</a>
+      <div class="tooltip" data-tip="博客列表">
+        <a class="btn btn-ghost" href="/article">
+          <Icon name="mage:folder-2-fill" />
+          article</a>
+      </div>
+      <div class="tooltip" data-tip="项目列表">
+        <a class="btn btn-ghost" href="/project">
+          <Icon name="mage:box-3d-fill" />
+          project</a>
+      </div>
+      <div class="tooltip" data-tip="关于我">
+        <a class="btn btn-ghost" href="/about">
+          <Icon name="mage:water-drop-fill" />
+          about</a>
+      </div>
     </div>
   </div>
 </div>
