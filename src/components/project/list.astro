@@ -1,0 +1,197 @@
+---
+import { Icon } from 'astro-icon/components';
+import ImgHaven from '@assets/haven.png';
+import Vue from '@badge/vue.astro';
+import Sass from '@badge/sass.astro';
+import Element from '@badge/element.astro';
+import Koa from '@badge/koa.astro';
+import CardHero from './card-hero.astro';
+import Dotnet from '../badge-set/dotnet.astro';
+import Win32 from '../badge-set/win32.astro';
+import Csharp from '../badge-set/csharp.astro';
+import Cpp from '../badge-set/cpp.astro';
+import Gradle from '../badge-set/gradle.astro';
+import Java from '../badge-set/java.astro';
+import Tauri from '../badge-set/tauri.astro';
+import React from '../badge-set/react.astro';
+import Vitejs from '../badge-set/vitejs.astro';
+import Daisyui from '../badge-set/daisyui.astro';
+import Kotlin from '../badge-set/kotlin.astro';
+import Ktor from '../badge-set/ktor.astro';
+import AstroIcon from '../badge-set/astro-icon.astro';
+import Tailwind from '../badge-set/tailwind.astro';
+import Ionic from '../badge-set/ionic.astro';
+import Vueuse from '../badge-set/vueuse.astro';
+---
+
+<div class="w-full flex flex-col items-center gap-4">
+
+  <div class="divider">Web & 前后端</div>
+  <CardHero title="EachStar 创作互助平台" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🌟 在线互助Star社区，基于 Github API 和 Element Plus
+        开发，致力于帮助开源项目积累初始影响力！
+      </div>
+      <div class="flex gap-1.5">
+        <Koa />
+        <Vue />
+        <Sass />
+        <Element />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-amber-400" target="_blank" href="http://each-star.com">
+        <Icon name="mage:building-b" />
+        站点</a>
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/FTLIKON/EachStar">
+        <Icon name="mage:github" />
+        GitHub</a>
+    </Fragment>
+  </CardHero>
+  <CardHero title="meteor-template 博客" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🌠 一个基于 Astro 的博客模板，使用 GitHub Actions & Page 自动部署
+      </div>
+      <div class="flex gap-1.5">
+        <AstroIcon />
+        <Daisyui />
+        <Tailwind />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-amber-400" target="_blank" href="http://yurina.cafe">
+        <Icon name="mage:building-b" />
+        站点</a>
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/meteor-template">
+        <Icon name="mage:github" />
+        GitHub</a>
+    </Fragment>
+  </CardHero>
+  <CardHero title="ZustCloud 校友录 (Mobile)" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🥼 校内信息推广 APP，基于 ionic 构建
+      </div>
+      <div class="flex gap-1.5">
+        <Ionic />
+        <Vue />
+        <Vueuse />
+        <Vitejs />
+        <Element />
+        <Tailwind />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-amber-400" target="_blank" href="http://yurina.cafe">
+        <Icon name="mage:building-b" />
+        站点</a>
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/meteor-template">
+        <Icon name="mage:github" />
+        GitHub</a>
+    </Fragment>
+  </CardHero>
+  <CardHero title="Kapi" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🥯 基于 H2 的文件系统 Web 后端，用于初学者脱离 Docker & 数据库 进行快速 Web 实验部署
+      </div>
+      <div class="flex gap-1.5">
+        <Kotlin />
+        <Ktor />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/kapi">
+        <Icon name="mage:github" />
+        GitHub</a>
+    </Fragment>
+  </CardHero>
+
+  <div class="divider">APP & 客户端</div>
+  <CardHero title="Almuni Desktop 校友录 (Desktop)" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🥼 一个校内 APP 的 tauri + react + vite + daisy-ui 桌面端版本
+      </div>
+      <div class="flex gap-1.5">
+        <Tauri />
+        <React />
+        <Vitejs />
+        <Daisyui />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/almuni-desktop">
+        <Icon name="mage:github" />
+        GitHub</a>
+    </Fragment>
+  </CardHero>
+  <CardHero title="RPALite 软件自动化工具" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>👾 根据 RPA 思想设计，基于 C# + WPF + WinAPI 的软件流程自动化工具（玩具偏多）
+      </div>
+      <div class="flex gap-1.5">
+        <Dotnet />
+        <Win32 />
+        <Csharp />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/RPALite">
+        <Icon name="mage:github" />
+        GitHub</a>
+    </Fragment>
+  </CardHero>
+
+  <div class="divider">Addon & 插件</div>
+  <CardHero title="FF14 Dalamud 卫月插件" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🔐 (暂停维护) 最简单的最终幻想 14 卫月插件案例，用于学习参考，由于 AFK 以及 API 更新已停止维护
+      </div>
+      <div class="flex gap-1.5">
+        <Cpp />
+        <Csharp />
+        <Win32 />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/XIVSpeedTrainer">
+        <Icon name="mage:github" />
+        SpeedTrainer</a>
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/AutoRetainerNative">
+        <Icon name="mage:github" />
+        自动雇员</a>
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/DalamudPlugins">
+        <Icon name="mage:github" />
+        插件库</a>
+    </Fragment>
+  </CardHero>
+  <CardHero title="Minecraft 1.20.x 服务端插件" img={ImgHaven}>
+    <Fragment slot="content">
+      <div>🍵 (MoTransform) 基于 Spigot 1.20.x 添加指令：通过物品的中文名查询英文原文（大概向下兼容到1.14）
+      </div>
+      <div>🍵 (WeToolbox) spigot plugins that create powerful WorldEdit toolbox.</div>
+      <div class="flex gap-1.5">
+        <Java />
+        <Gradle />
+      </div>
+    </Fragment>
+    <Fragment slot="footer">
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/MoTransform">
+        <Icon name="mage:github" />
+        MoTransform</a>
+      <a class="link-btn !bg-gray-200" target="_blank" href="https://github.com/Nesb01t/WeToolbox">
+        <Icon name="mage:github" />
+        WeToolbox</a>
+    </Fragment>
+  </CardHero>
+</div>
+
+
+<style>
+    .link-btn {
+        @apply btn btn-sm !rounded-t-lg !rounded-b-none glass font-bold border-none shadow-none;
+        transition: all 0.26s;
+    }
+
+    .link-btn:hover {
+        @apply h-[40px];
+    }
+</style>

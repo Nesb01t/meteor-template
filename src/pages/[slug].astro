@@ -1,6 +1,7 @@
 ---
-import BaseLayout from '../layouts/base/index.astro';
-import { getBaseName } from '../utils/route';
+import BaseLayout from '@layouts/base/index.astro';
+import { getBaseName } from '@utils/route';
+import { Icon } from 'astro-icon/components';
 
 export const getStaticPaths = async () => {
   const getBaseName = (path: string) => {
@@ -27,7 +28,14 @@ const tag = frontmatter.tag;
 ---
 
 <BaseLayout>
-  <h1 class="text-3xl font-bold mb-4">{title}</h1>
+  <div class="flex items-center mb-4 gap-1.5">
+    <div class="tooltip" data-tip="back to article">
+      <a href="/article">
+        <Icon size="16" name="mage:l-arrow-up-left" />
+      </a>
+    </div>
+    <h1 class="text-3xl font-bold">{title}</h1>
+  </div>
   <div class="text-gray-500 mb-4 flex items-center">
     <div class="badge badge-ghost badge-sm">{tag}</div>
   </div>

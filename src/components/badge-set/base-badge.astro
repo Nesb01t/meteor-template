@@ -1,0 +1,18 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { icon, name, color } = Astro.props;
+---
+
+<div class="base-badge">
+  <Icon name={icon} />
+  {name}
+</div>
+
+<style>
+    .base-badge {
+        @apply badge badge-ghost border-none rounded-lg gap-1;
+        text-shadow: none;
+        background: linear-gradient(#e1e1e1, #ffffff);
+    }
+</style>

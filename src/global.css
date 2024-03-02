@@ -4,12 +4,12 @@
 
 /* 文字段落 */
 ol li, p {
-    @apply text-sm h-[28px] ml-[8px];
+    @apply text-sm h-[24px] ml-[8px];
 }
 
 /* 列表 */
 ul li {
-    @apply text-sm h-[28px] ml-[10px] list-disc list-inside;
+    @apply text-sm h-[24px] ml-[10px] list-disc list-inside;
 
 }
 
