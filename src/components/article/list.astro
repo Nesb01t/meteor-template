@@ -1,11 +1,58 @@
 ---
 import { parseArticles } from '@utils/glob';
 import ArticleItem from './item.astro';
+import { Article } from '../../utils/glob';
+import Linux from '../badge-set/linux.astro';
+import AstroIcon from '../badge-set/astro-icon.astro';
+import Markdown from "../badge-set/markdown.astro";
 
 const posts = await Astro.glob('../../content/article/*.md');
-const articles = parseArticles(posts);
+const articles: Article[] = parseArticles(posts);
+
+const articlesFilteredTags = (tag) => {
+  return articles.filter((a) => a.tag.includes(tag));
+};
 ---
 
-<div class="flex flex-col items-start w-full">
-  {articles.map((a) => <ArticleItem class="w-full" article={a} />)}
+<div class="article-list">
+  <div class="article-divider">
+    <Linux />
+  </div>
+  {
+    articlesFilteredTags('linux').map((a) => (
+      <ArticleItem class="w-full" article={a} />
+    ))
+  }
+
+  <div class="article-divider">
+    <AstroIcon  />
+  </div>
+    {
+      articlesFilteredTags('astro').map((a) => (
+        <ArticleItem class="w-full" article={a} />
+      ))
+    }
+
+  <div class="article-divider">
+    <Markdown/>
+  </div>
+  {
+    articlesFilteredTags('markdown').map((a) => (
+        <ArticleItem class="w-full" article={a} />
+    ))
+  }
 </div>
+
+<style>
+  .article-list {
+    @apply flex flex-col justify-start h-full items-start w-full gap-1;
+  }
+
+  .article-divider {
+    @apply divider;
+  }
+
+  .article-divider:not(:first-of-type) {
+    @apply mt-[60px];
+  }
+</style>

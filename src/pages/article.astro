@@ -5,14 +5,14 @@ import ArticleList from '@components/article/list.astro';
 
 <BaseLayout>
   <h2>Articles</h2>
-    <p>一些学习笔记和折腾记录，可能还有一些生活日志</p>
-  <div class="article-list">
+  <p>一些学习笔记和折腾记录，可能还有一些生活日志</p>
+  <div class="articles">
     <ArticleList />
   </div>
 </BaseLayout>
 
 <style>
-  .article-list {
+  .articles {
     @apply flex flex-col items-start w-full mt-[30px];
   }
 </style>
