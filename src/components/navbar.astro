@@ -15,17 +15,20 @@ import { Icon } from 'astro-icon/components';
       <div class="tooltip" data-tip="博客列表">
         <a class="btn btn-ghost" href="/article">
           <Icon name="mage:folder-2-fill" />
-          article</a>
+           article</a
+        >
       </div>
       <div class="tooltip" data-tip="项目列表">
         <a class="btn btn-ghost" href="/project">
           <Icon name="mage:box-3d-fill" />
-          project</a>
+           project</a
+        >
       </div>
       <div class="tooltip" data-tip="关于我">
         <a class="btn btn-ghost" href="/about">
           <Icon name="mage:water-drop-fill" />
-          about</a>
+           about</a
+        >
       </div>
     </div>
   </div>
@@ -33,17 +36,17 @@ import { Icon } from 'astro-icon/components';
 <div class="h-[140px]"></div>
 
 <style>
-    .navbar-wrapper {
-        @apply fixed p-8 top-0 left-0 right-0 z-10;
-    }
+  .navbar-wrapper {
+    @apply fixed p-8 top-0 left-0 right-0 z-10;
+  }
 
+  .navbar__subtitle {
+    @apply text-primary font-light;
+  }
+
+  @media (max-width: 800px) {
     .navbar__subtitle {
-        @apply text-primary font-light;
+      @apply hidden;
     }
-
-    @media (max-width: 800px) {
-        .navbar__subtitle {
-            @apply hidden;
-        }
-    }
+  }
 </style>

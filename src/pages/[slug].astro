@@ -10,7 +10,7 @@ export const getStaticPaths = async () => {
 
   const posts = await Astro.glob('../content/article/*.md');
 
-  return posts.map(post => ({
+  return posts.map((post) => ({
     params: {
       slug: getBaseName(post.file),
     },
@@ -47,7 +47,7 @@ const tag = frontmatter.tag;
 </BaseLayout>
 
 <style>
-    .article {
-        @apply w-full card shadow-xl rounded-xl;
-    }
+  .article {
+    @apply w-full card shadow-xl rounded-xl;
+  }
 </style>

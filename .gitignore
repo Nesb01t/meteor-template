@@ -3,6 +3,7 @@ dist/
 
 # ide
 /.idea
+/.vscode
 
 # generated types
 .astro/

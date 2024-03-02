@@ -10,11 +10,11 @@ tag: 'astro'
 
 ```ts
 interface IconProps {
-    name: string;
-    title?: string;
-    size?: number;
-    width?: number;
-    height?: number;
+  name: string;
+  title?: string;
+  size?: number;
+  width?: number;
+  height?: number;
 }
 ```
 

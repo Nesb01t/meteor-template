@@ -7,7 +7,5 @@ const articles = parseArticles(posts);
 ---
 
 <div class="flex flex-col items-start w-full">
-  {articles.map((a) =>
-    <ArticleItem class="w-full" article={a} />,
-  )}
+  {articles.map((a) => <ArticleItem class="w-full" article={a} />)}
 </div>
