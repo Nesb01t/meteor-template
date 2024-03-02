@@ -1,11 +1,20 @@
 ---
 import { Icon } from 'astro-icon/components';
+import CardHero from './card-hero.astro';
+
+import ImgAlmuni from '@assets/almuni.jpg';
+import ImgDalamud from '@assets/dalamud.jpg';
 import ImgHaven from '@assets/haven.png';
+import ImgJava from '@assets/java.png';
+import ImgKapi from '@assets/kapi.png';
+import ImgMeteor from '@assets/meteor.png';
+import ImgRPALite from '@assets/rpalite.png';
+import ImgZustCloud from '@assets/zustcloud.jpg';
+
 import Vue from '@badge/vue.astro';
 import Sass from '@badge/sass.astro';
 import Element from '@badge/element.astro';
 import Koa from '@badge/koa.astro';
-import CardHero from './card-hero.astro';
 import Dotnet from '../badge-set/dotnet.astro';
 import Win32 from '../badge-set/win32.astro';
 import Csharp from '../badge-set/csharp.astro';
@@ -22,10 +31,10 @@ import AstroIcon from '../badge-set/astro-icon.astro';
 import Tailwind from '../badge-set/tailwind.astro';
 import Ionic from '../badge-set/ionic.astro';
 import Vueuse from '../badge-set/vueuse.astro';
+import Capacitor from '../badge-set/capacitor.astro';
 ---
 
 <div class="w-full flex flex-col items-center gap-4">
-
   <div class="divider">Web & 前后端</div>
   <CardHero title="EachStar 创作互助平台" img={ImgHaven}>
     <Fragment slot="content">
@@ -48,7 +57,7 @@ import Vueuse from '../badge-set/vueuse.astro';
         GitHub</a>
     </Fragment>
   </CardHero>
-  <CardHero title="meteor-template 博客" img={ImgHaven}>
+  <CardHero title="meteor-template 博客" img={ImgMeteor}>
     <Fragment slot="content">
       <div>🌠 一个基于 Astro 的博客模板，使用 GitHub Actions & Page 自动部署
       </div>
@@ -67,12 +76,13 @@ import Vueuse from '../badge-set/vueuse.astro';
         GitHub</a>
     </Fragment>
   </CardHero>
-  <CardHero title="ZustCloud 校友录 (Mobile)" img={ImgHaven}>
+  <CardHero title="ZustCloud 校友录 (Mobile)" img={ImgAlmuni}>
     <Fragment slot="content">
       <div>🥼 校内信息推广 APP，基于 ionic 构建
       </div>
       <div class="flex gap-1.5">
         <Ionic />
+        <Capacitor />
         <Vue />
         <Vueuse />
         <Vitejs />
@@ -89,7 +99,7 @@ import Vueuse from '../badge-set/vueuse.astro';
         GitHub</a>
     </Fragment>
   </CardHero>
-  <CardHero title="Kapi" img={ImgHaven}>
+  <CardHero title="Kapi" img={ImgKapi}>
     <Fragment slot="content">
       <div>🥯 基于 H2 的文件系统 Web 后端，用于初学者脱离 Docker & 数据库 进行快速 Web 实验部署
       </div>
@@ -106,7 +116,7 @@ import Vueuse from '../badge-set/vueuse.astro';
   </CardHero>
 
   <div class="divider">APP & 客户端</div>
-  <CardHero title="Almuni Desktop 校友录 (Desktop)" img={ImgHaven}>
+  <CardHero title="Almuni Desktop 校友录 (Desktop)" img={ImgZustCloud}>
     <Fragment slot="content">
       <div>🥼 一个校内 APP 的 tauri + react + vite + daisy-ui 桌面端版本
       </div>
@@ -123,7 +133,7 @@ import Vueuse from '../badge-set/vueuse.astro';
         GitHub</a>
     </Fragment>
   </CardHero>
-  <CardHero title="RPALite 软件自动化工具" img={ImgHaven}>
+  <CardHero title="RPALite 软件自动化工具" img={ImgRPALite}>
     <Fragment slot="content">
       <div>👾 根据 RPA 思想设计，基于 C# + WPF + WinAPI 的软件流程自动化工具（玩具偏多）
       </div>
@@ -141,7 +151,7 @@ import Vueuse from '../badge-set/vueuse.astro';
   </CardHero>
 
   <div class="divider">Addon & 插件</div>
-  <CardHero title="FF14 Dalamud 卫月插件" img={ImgHaven}>
+  <CardHero title="FF14 Dalamud 卫月插件" img={ImgDalamud}>
     <Fragment slot="content">
       <div>🔐 (暂停维护) 最简单的最终幻想 14 卫月插件案例，用于学习参考，由于 AFK 以及 API 更新已停止维护
       </div>
@@ -163,7 +173,7 @@ import Vueuse from '../badge-set/vueuse.astro';
         插件库</a>
     </Fragment>
   </CardHero>
-  <CardHero title="Minecraft 1.20.x 服务端插件" img={ImgHaven}>
+  <CardHero title="Minecraft 1.20.x 服务端插件" img={ImgJava}>
     <Fragment slot="content">
       <div>🍵 (MoTransform) 基于 Spigot 1.20.x 添加指令：通过物品的中文名查询英文原文（大概向下兼容到1.14）
       </div>

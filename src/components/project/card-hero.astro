@@ -41,10 +41,11 @@ const { img, title } = Astro.props;
     .card-hero__backdrop {
         @apply card-hero__content backdrop-blur-sm;
         background-color: rgba(0, 0, 0, 0.22);
-        transition: background-color 0.5s;
+        transition: all 0.3s ease;
     }
 
     .card-hero:hover .card-hero__backdrop {
+        @apply backdrop-blur-0;
         background-color: rgba(0, 0, 0, 0.5);
         background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 0),
         linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 0);
