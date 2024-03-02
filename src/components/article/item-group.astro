@@ -1,0 +1,20 @@
+---
+import ArticleItem from './item.astro';
+import { Article, parseArticles } from '../../utils/glob';
+
+const posts = await Astro.glob('../../../articles/*.md');
+const articles: Article[] = parseArticles(posts);
+const articlesFilteredTags = (tag) => {
+  return articles.filter((a) => a.tag.includes(tag));
+};
+
+const { tag } = Astro.props;
+---
+
+<>
+  {
+    articlesFilteredTags(tag).map((a) => (
+      <ArticleItem class="w-full" article={a} />
+    ))
+  }
+</>

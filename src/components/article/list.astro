@@ -1,46 +1,32 @@
 ---
-import { parseArticles } from '@utils/glob';
-import ArticleItem from './item.astro';
-import { Article } from '../../utils/glob';
 import Linux from '../badge-set/linux.astro';
 import AstroIcon from '../badge-set/astro-icon.astro';
-import Markdown from "../badge-set/markdown.astro";
-
-const posts = await Astro.glob('../../../articles/*.md');
-const articles: Article[] = parseArticles(posts);
-
-const articlesFilteredTags = (tag) => {
-  return articles.filter((a) => a.tag.includes(tag));
-};
+import Markdown from '../badge-set/markdown.astro';
+import ItemGroup from './item-group.astro';
+import Java from '../badge-set/java.astro';
 ---
 
 <div class="article-list">
   <div class="article-divider">
     <Linux />
   </div>
-  {
-    articlesFilteredTags('linux').map((a) => (
-      <ArticleItem class="w-full" article={a} />
-    ))
-  }
+  <ItemGroup tag="linux" />
 
   <div class="article-divider">
-    <AstroIcon  />
+    <AstroIcon />
   </div>
-    {
-      articlesFilteredTags('astro').map((a) => (
-        <ArticleItem class="w-full" article={a} />
-      ))
-    }
+  <ItemGroup tag="astro" />
 
   <div class="article-divider">
-    <Markdown/>
+    <Markdown />
   </div>
-  {
-    articlesFilteredTags('markdown').map((a) => (
-        <ArticleItem class="w-full" article={a} />
-    ))
-  }
+  <ItemGroup tag="markdown" />
+
+  <div class="article-divider">
+    <Java />
+  </div>
+  <ItemGroup tag="java" />
+
 </div>
 
 <style>

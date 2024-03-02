@@ -10,7 +10,7 @@
       "@utils/*": ["src/utils/*"],
       "@assets/*": ["src/assets/*"],
       "@badge/*": ["src/components/badge-set/*"],
-      "@article/*": ["article/*"],
+      "@article/*": ["article/*"]
     }
   }
 }
