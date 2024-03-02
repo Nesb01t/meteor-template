@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@layouts/base/index.astro';
+import ArticleList from '@components/article/list.astro';
+---
+
+<BaseLayout>
+  <h1>Article</h1>
+  <div class="article-list">
+    <ArticleList />
+  </div>
+</BaseLayout>
+
+<style>
+  .article-list {
+    @apply flex flex-col items-start w-full mt-[30px];
+  }
+</style>

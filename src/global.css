@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 文字段落 */
+ol li,
+p {
+  @apply text-sm h-[24px] ml-[8px];
+}
+
+/* 列表 */
+ul li {
+  @apply text-sm h-[24px] ml-[10px] list-disc list-inside;
+}
+
+/* 标题 */
+h1 {
+  @apply text-4xl font-bold mb-[8px];
+}
+
+h2 {
+  @apply text-3xl font-bold mb-[8px];
+}
+
+h3 {
+  @apply text-2xl font-bold mb-[8px];
+}
+
+/* code mockup */
+pre.astro-code {
+  @apply mockup-code text-sm rounded-lg m-2;
+}
+
+pre.astro-code code {
+  @apply flex flex-col ml-6;
+}

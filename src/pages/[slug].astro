@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@layouts/base/index.astro';
+import { getBaseName } from '@utils/route';
+import { Icon } from 'astro-icon/components';
+
+export const getStaticPaths = async () => {
+  const getBaseName = (path: string) => {
+    return path.split('/').pop().split('.').shift();
+  };
+
+  const posts = await Astro.glob('../content/article/*.md');
+
+  return posts.map((post) => ({
+    params: {
+      slug: getBaseName(post.file),
+    },
+    props: {
+      post,
+    },
+  }));
+};
+
+const { Content, file, frontmatter } = Astro.props.post;
+
+// get the post info
+const title = getBaseName(file);
+const tag = frontmatter.tag;
+---
+
+<BaseLayout>
+  <div class="flex items-center mb-4 gap-1.5">
+    <div class="tooltip" data-tip="返回 Article 页面">
+      <a href="/article">
+        <Icon size="16" name="mage:l-arrow-up-left" />
+      </a>
+    </div>
+    <h1 class="text-3xl font-bold">{title}</h1>
+  </div>
+  <div class="text-gray-500 mb-4 flex items-center">
+    <div class="badge badge-ghost badge-sm">{tag}</div>
+  </div>
+  <div class="article">
+    <div class="card-body">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .article {
+    @apply w-full card shadow-xl rounded-xl;
+  }
+</style>

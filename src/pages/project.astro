@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@layouts/base/index.astro';
+import ProjectList from '@components/project/list.astro';
+---
+
+<BaseLayout>
+  <h1>Project</h1>
+  <div class="project-list">
+    <ProjectList />
+  </div>
+</BaseLayout>
+
+<style>
+  .project-list {
+    @apply flex flex-col items-start w-full mt-[30px];
+  }
+</style>
