@@ -6,7 +6,7 @@ import Linux from '../badge-set/linux.astro';
 import AstroIcon from '../badge-set/astro-icon.astro';
 import Markdown from "../badge-set/markdown.astro";
 
-const posts = await Astro.glob('../../content/article/*.md');
+const posts = await Astro.glob('../../../articles/*.md');
 const articles: Article[] = parseArticles(posts);
 
 const articlesFilteredTags = (tag) => {

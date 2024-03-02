@@ -9,7 +9,8 @@
       "@pages/*": ["src/pages/*"],
       "@utils/*": ["src/utils/*"],
       "@assets/*": ["src/assets/*"],
-      "@badge/*": ["src/components/badge-set/*"]
+      "@badge/*": ["src/components/badge-set/*"],
+      "@article/*": ["article/*"],
     }
   }
 }
