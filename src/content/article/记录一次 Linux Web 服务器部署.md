@@ -17,11 +17,7 @@ tag: 'linux'
 
 ### 连接服务器
 
-1. 打开终端
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f231f4794f24e6eb96d6bb3ead045e0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=594&h=235&s=19950&e=png&b=111111)
-
-2. 连接
+打开终端连接
 
 ```bash
 ssh -l root [服务器公网IP]
@@ -29,13 +25,6 @@ ssh -l root [服务器公网IP]
 
 其中 root 是你的 Ubuntu 系统用户名，一般云服务器默认就是 root，可以在购买时留意一下
 
-之后会要求输入密码，输入之后 enter 即可
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16a2a8c2b2ea4d3891d8b1ce04cb387f~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=520&h=64&s=4055&e=png&b=0d0d0d)
-
-如图，连接成功之后会显示欢迎
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a7773e9fc43a41e092d9343e121207ed~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=870&h=580&s=60119&e=png&b=0c0c0c)
 
 ### 安装软件
 
@@ -60,16 +49,11 @@ ssh -l root [服务器公网IP]
 
 执行 `pnpm dlx nuxi@latest init [项目文件夹名]` 初始化 nuxt 项目，过程中会询问你一些选项、设置
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79700afb683f48cfa7f54a5cde0cc8d9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=851&h=381&s=30580&e=png&b=0c0c0c)
-
 创建成功后运行即可
 
 - cd work // 进入项目文件夹目录
 - pnpm run dev --host // 运行（带上 host 支持开发时远程访问）
 
-运行成功！
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c9a2607e2b74d0aabfa76fdb82083eb~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=748&h=356&s=32324&e=png&b=0d0d0d)
 
 ### 访问
 
@@ -78,7 +62,3 @@ ssh -l root [服务器公网IP]
 确保你的服务器放通了 **3000** 端口（后续可以更改）
 
 打开浏览器访问 `你的服务器IP:端口` 例如 123.12.123.123:3000
-
-成功！
-
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f9bbbf6eb00b476c936d1c5048dca7d8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1713&h=1068&s=176462&e=png&b=ffffff)
