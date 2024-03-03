@@ -51,3 +51,4 @@ input[name="password"] 选择属性值为 password 的 input
 ### 伪类
 
 p:last-of-type 这会选择最后一个 p 元素
+p:not(#selector) 排除的伪类
