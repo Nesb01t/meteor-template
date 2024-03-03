@@ -3,7 +3,7 @@ tag: 'html'
 date: '2024/3/3'
 ---
 
-### 语义化
+## 语义化
 
 div 主要用来设计布局
 
@@ -17,7 +17,7 @@ div 主要用来设计布局
 - 无障碍访问
 - 可读性
 
-### form 表单
+## form 表单
 
 form 通过 action="url" 将信息 post 到服务器
 
@@ -28,7 +28,7 @@ form 通过 action="url" 将信息 post 到服务器
 
 input 和 button 是内联元素
 
-### html head
+## html head
 
 设置字符集 meta attribute=value 例如 charset=utf-8
 
@@ -36,6 +36,18 @@ input 和 button 是内联元素
 
 支持移动端 meta name="viewport" content="width=device-width, initial-scale=1.0"
 
-### 基础 css
+## 基础 css
 
-p 是块级元素
+哪些元素默认是块级，哪些是内联 (inline-block)
+
+hsl 函数参数为 色调，饱和度，亮度
+
+rem 代表 根em 和 html 的字体大小有关
+
+使用 unset 可以清除元素之前设置的样式
+
+input[name="password"] 选择属性值为 password 的 input
+
+### 伪类
+
+p:last-of-type 这会选择最后一个 p 元素
