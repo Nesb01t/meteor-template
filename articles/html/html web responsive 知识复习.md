@@ -5,6 +5,8 @@ date: '2024/3/3'
 
 ### 语义化
 
+div 主要用来设计布局
+
 即使全部用 div 也一样能正确绘制页面，但当你看到 div class=form-item 和 ul 时产生的心智负担是不一样的
 
 添加 main, footer 等标签
@@ -25,3 +27,15 @@ form 通过 action="url" 将信息 post 到服务器
 - id 用于标识特定 HTML 元素，不应有重复
 
 input 和 button 是内联元素
+
+### html head
+
+设置字符集 meta attribute=value 例如 charset=utf-8
+
+外部样式表 link rel=stylesheet href="url"
+
+支持移动端 meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+### 基础 css
+
+p 是块级元素
