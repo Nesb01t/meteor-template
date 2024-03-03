@@ -1,9 +1,10 @@
 ---
-import Linux from '../badge-set/linux.astro';
-import AstroIcon from '../badge-set/astro-icon.astro';
-import Markdown from '../badge-set/markdown.astro';
+import Linux from '@components/badge-set/linux.astro';
+import AstroIcon from '@components/badge-set/astro-icon.astro';
+import Markdown from '@components/badge-set/markdown.astro';
 import ItemGroup from './item-group.astro';
-import Java from '../badge-set/java.astro';
+import Java from '@components/badge-set/java.astro';
+import Html from '@components/badge-set/html.astro';
 ---
 
 <div class="article-list">
@@ -27,6 +28,10 @@ import Java from '../badge-set/java.astro';
   </div>
   <ItemGroup tag="java" />
 
+  <div class="article-divider">
+    <Html />
+  </div>
+  <ItemGroup tag="html" />
 </div>
 
 <style>
