@@ -8,7 +8,7 @@ export const getStaticPaths = async () => {
     return path.split('/').pop().split('.').shift();
   };
 
-  const posts = await Astro.glob('../../../articles/*.md');
+  const posts = await Astro.glob('../../../articles/**/*.md');
 
   return posts.map((post) => ({
     params: {
