@@ -5,6 +5,7 @@ import Markdown from '@components/badge-set/markdown.astro';
 import ItemGroup from './item-group.astro';
 import Java from '@components/badge-set/java.astro';
 import Html from '@components/badge-set/html.astro';
+import StarFill from '@components/badge-set/star-fill.astro';
 ---
 
 <div class="article-list">
@@ -19,11 +20,6 @@ import Html from '@components/badge-set/html.astro';
   <ItemGroup tag="astro" />
 
   <div class="article-divider">
-    <Markdown />
-  </div>
-  <ItemGroup tag="markdown" />
-
-  <div class="article-divider">
     <Java />
   </div>
   <ItemGroup tag="java" />
@@ -32,6 +28,16 @@ import Html from '@components/badge-set/html.astro';
     <Html />
   </div>
   <ItemGroup tag="html" />
+
+  <div class="article-divider">
+    <Markdown />
+  </div>
+  <ItemGroup tag="markdown" />
+
+  <div class="article-divider">
+    <StarFill />
+  </div>
+  <ItemGroup tag="star" />
 </div>
 
 <style>
