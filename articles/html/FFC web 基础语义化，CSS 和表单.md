@@ -36,6 +36,8 @@ input 和 button 是内联元素
 
 支持移动端 meta name="viewport" content="width=device-width, initial-scale=1.0"
 
+SEO 可以识别 meta name="description" 和 title
+
 ## 基础 css
 
 哪些元素默认是块级，哪些是内联 (inline-block)
@@ -52,3 +54,35 @@ input[name="password"] 选择属性值为 password 的 input
 
 p:last-of-type 这会选择最后一个 p 元素
 p:not(#selector) 排除的伪类
+
+## 盒模型
+
+HTML 中每一个元素都被视为拥有4个区域的盒子
+
+将 border 想象成运送货物的纸板箱
+
+默认的是 content-box，如果 width = 100px，那就是 100px，任何 padding 和 border 都会在这个基础上增加
+
+border-box 将会包含 padding 和 border，导致最终宽度一定是 100px
+
+## filter
+
+使用 filter: blur(3px) 纠正颜色和形状过于锐利的问题
+
+## 旋转
+
+使用 transform: rotate(-0.6deg) 逆时针旋转 0.6 度
+
+## text
+
+使用 text-transform: uppercase 转化为全大写
+
+使用 letter-spacing 调整文字间距
+
+## aspect ratio
+
+用于图片约束比例，比如已有宽度约束高度
+
+## scroll-behavior 滚动条行为
+
+当使用 #anchorId 跳转时候可能会让人非常迷糊，给所有元素添加 scroll-behavior: smooth 即可
