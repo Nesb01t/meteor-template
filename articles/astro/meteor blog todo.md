@@ -9,8 +9,10 @@ date: '2024/3/2'
 - [ ] 支持 p > code
 - [ ] 支持 tag 分类筛选
 - [ ] articles tag 方便增加
+- [ ] 支持侧边栏目录导航
 
 还需要手动改代码的地方
+
 - [ ] 添加分类 tag article/item-group
 
 ### 计划中
