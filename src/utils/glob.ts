@@ -7,7 +7,9 @@ export interface Article {
   tag?: string;
 }
 
-export const parseArticles = (src: MarkdownInstance<Record<string, any>>[]) => {
+export const parseArticles = (
+  src: MarkdownInstance<Record<string, any>>[],
+): Article[] => {
   return src.map((post) => {
     const title = getBaseName(post.file);
     const content = post.compiledContent();

@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '@layouts/base/index.astro';
+import type { Article } from '@utils/glob';
 import { getBaseName } from '@utils/route';
 import { Icon } from 'astro-icon/components';
 
 export const getStaticPaths = async () => {
   const getBaseName = (path: string) => {
-    return path.split('/').pop().split('.').shift();
+    return path.split('/').pop()?.split('.').shift();
   };
 
-  const posts = await Astro.glob('../../../articles/**/*.md');
+  const posts: any = await Astro.glob('../../../articles/**/*.md');
 
-  return posts.map((post) => ({
+  return posts.map((post: any) => ({
     params: {
       slug: getBaseName(post.file),
     },
@@ -20,18 +21,27 @@ export const getStaticPaths = async () => {
   }));
 };
 
-const { Content, file, frontmatter } = Astro.props.post;
+const { post } = Astro.props;
+const { Content, file, frontmatter } = post as {
+  Content: any;
+  file: any;
+  frontmatter: any;
+};
 
 // get the post info
 const title = getBaseName(file);
-const tag = frontmatter.tag;
+let tag;
+if (frontmatter) {
+  const frontmatterHacked: any = frontmatter;
+  tag = frontmatterHacked.tag;
+}
 ---
 
 <BaseLayout>
   <div class="flex items-center mb-4 gap-1.5">
     <div class="tooltip" data-tip="返回 Article 页面">
       <a href="/article">
-        <Icon size="16" name="mage:l-arrow-up-left" />
+        <Icon :size="16" name="mage:l-arrow-up-left" />
       </a>
     </div>
     <h1 class="text-3xl font-bold">{title}</h1>
