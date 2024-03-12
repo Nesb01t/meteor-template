@@ -33,21 +33,28 @@ import { Icon } from 'astro-icon/components';
     </div>
   </div>
 </div>
-<div class="h-[140px]"></div>
+<div class="bfc-killer"></div>
 
 <style>
   .navbar-wrapper {
-    @apply fixed px-8 py-1 top-0 left-0 right-0 z-10 backdrop-blur shadow-xl;
-    background-color: rgba(234,234,234,0.9)
+    @apply fixed px-8 py-1 top-0 left-0 right-0 z-10 backdrop-blur shadow;
+    background-color: rgba(234, 234, 234, 0.9);
   }
 
   .navbar__subtitle {
     @apply text-primary font-light;
   }
 
-  @media (max-width: 800px) {
+  .bfc-killer {
+    height: 120px;
+  }
+  @media (max-width: 1000px) {
     .navbar__subtitle {
       @apply hidden;
+    }
+
+    .bfc-killer {
+      height: 70px;
     }
   }
 </style>

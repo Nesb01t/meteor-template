@@ -223,8 +223,8 @@ const animate = () => {
 const render = () => {
     const time = Date.now() * 0.001;
 
-    mesh.rotation.x = time * 0.04;
-    mesh.rotation.y = time * 0.2;
+    mesh.rotation.x = time * 0.02;
+    mesh.rotation.y = time * 0.02;
 
     raycaster.setFromCamera(pointer, camera);
 

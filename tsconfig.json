@@ -7,6 +7,7 @@
         "name": "@astrojs/ts-plugin"
       }
     ],
+    "target": "ES2022",
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
