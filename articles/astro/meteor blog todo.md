@@ -5,16 +5,15 @@ date: '2024/3/2'
 
 ## TODO
 
-- [ ] 支持 blockquote
-- [X] 支持 p > code
-- [ ] 支持 tag 分类筛选
-- [X] articles tag 方便增加
 - [ ] 支持侧边栏目录导航
+- [ ] 支持 tag 分类筛选
+- [X] 支持 p > code
+- [X] articles tag 方便增加
 
-### 可配置化
+### Configuration
 
 - [ ] 添加分类 tag article/item-group
 
-## 计划中
+## Scheduling
 
-- 暂无
+- [ ] 支持 blockquote
