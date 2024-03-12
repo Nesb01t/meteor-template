@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <div class="navbar-wrapper">
-  <div class="navbar rounded-lg backdrop-blur shadow">
+  <div class="navbar rounded-lg">
     <div class="flex-1">
       <button class="btn glass">
         <Icon name="mage:note-fill" />
@@ -12,19 +12,19 @@ import { Icon } from 'astro-icon/components';
       </button>
     </div>
     <div class="flex-none gap-2">
-      <div class="tooltip" data-tip="博客列表">
+      <div class="tooltip tooltip-bottom" data-tip="博客列表">
         <a class="btn btn-ghost" href="/article">
           <Icon name="mage:folder-2-fill" />
            articles</a
         >
       </div>
-      <div class="tooltip" data-tip="项目列表">
+      <div class="tooltip tooltip-bottom" data-tip="项目列表">
         <a class="btn btn-ghost" href="/project">
           <Icon name="mage:box-3d-fill" />
            projects</a
         >
       </div>
-      <div class="tooltip" data-tip="关于我">
+      <div class="tooltip tooltip-bottom" data-tip="关于我">
         <a class="btn btn-ghost" href="/about">
           <Icon name="mage:water-drop-fill" />
            about</a
@@ -37,7 +37,7 @@ import { Icon } from 'astro-icon/components';
 
 <style>
   .navbar-wrapper {
-    @apply fixed p-8 top-0 left-0 right-0 z-10;
+    @apply fixed px-8 py-1 top-0 left-0 right-0 z-10 backdrop-blur shadow;
   }
 
   .navbar__subtitle {

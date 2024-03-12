@@ -5,6 +5,7 @@ export interface Article {
   title: string;
   content: string;
   tag?: string;
+  date?: string;
 }
 
 export const parseArticles = (
@@ -14,10 +15,12 @@ export const parseArticles = (
     const title = getBaseName(post.file);
     const content = post.compiledContent();
     const tag = post.frontmatter.tag;
+    const date = post.frontmatter.date;
     return {
       title,
       content,
       tag,
+      date,
     };
   });
 };

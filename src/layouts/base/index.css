@@ -4,5 +4,5 @@ body {
 }
 
 main {
-  @apply flex flex-col items-center mx-auto p-4 max-w-[800px];
+  @apply flex flex-col items-center mx-auto max-w-[800px];
 }

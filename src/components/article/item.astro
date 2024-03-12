@@ -2,9 +2,28 @@
 const { article } = Astro.props;
 ---
 
-<div class="tooltip" data-tip="点击跳转">
-  <a class="btn btn-ghost btn-sm" href={article.title}>
-    <li>{article.title}</li>
-    <!--<div class="badge badge-ghost badge-sm">{article.tag}</div>-->
-  </a>
+<div class="article-list-item">
+  <div class="tooltip" data-tip="点击跳转">
+    <a class="btn btn-ghost btn-sm" href={'article/' + article.title}>
+      <li class="align-left">
+        <span>
+          {article.title}
+        </span>
+      </li>
+      <!--<div class="badge badge-ghost badge-sm">{article.tag}</div>-->
+    </a>
+  </div>
+  <span class="release-date">
+    {article.date}
+  </span>
 </div>
+
+<style>
+  .article-list-item {
+    @apply w-full flex items-center;
+  }
+
+  .release-date {
+    @apply ml-auto text-primary-focus cursor-default text-sm;
+  }
+</style>
