@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 
-let container, stats;
+let container;
 let camera, scene, renderer;
-let raycaster, pointer;
-let mesh, line;
+let pointer;
+let mesh;
 
 
 const init = () => {
@@ -18,7 +18,7 @@ const init = () => {
         1,
         3500,
     );
-    camera.position.z = 2550;
+    camera.position.z = 3300;
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xeeeeee);
@@ -42,7 +42,7 @@ const init = () => {
      * 生成 base triangle
      */
 
-    const triangles = 300;
+    const triangles = 50;
 
     let geometry = new THREE.BufferGeometry();
 
@@ -54,7 +54,7 @@ const init = () => {
 
     const n = 1800,
         n2 = n / 2; // triangles spread in the cube
-    const d = 120,
+    const d = 600,
         d2 = d / 2; // individual triangle size
 
     const pA = new THREE.Vector3();
@@ -167,9 +167,6 @@ const init = () => {
     /**
      * 位置材质
      */
-
-    raycaster = new THREE.Raycaster();
-
     pointer = new THREE.Vector2();
 
     geometry = new THREE.BufferGeometry();
@@ -182,9 +179,6 @@ const init = () => {
         color: 0xffffff,
         transparent: true,
     });
-
-    line = new THREE.Line(geometry, material);
-    scene.add(line);
 
     /**
      * 渲染器
@@ -225,31 +219,6 @@ const render = () => {
 
     mesh.rotation.x = time * 0.02;
     mesh.rotation.y = time * 0.02;
-
-    raycaster.setFromCamera(pointer, camera);
-
-    const intersects = raycaster.intersectObject(mesh);
-
-    if (intersects.length > 0) {
-        const intersect = intersects[0];
-        const face = intersect.face;
-
-        const linePosition = line.geometry.attributes.position;
-        const meshPosition = mesh.geometry.attributes.position;
-
-        linePosition.copyAt(0, meshPosition, face.a);
-        linePosition.copyAt(1, meshPosition, face.b);
-        linePosition.copyAt(2, meshPosition, face.c);
-        linePosition.copyAt(3, meshPosition, face.a);
-
-        mesh.updateMatrix();
-
-        line.geometry.applyMatrix4(mesh.matrix);
-
-        line.visible = true;
-    } else {
-        line.visible = false;
-    }
 
     renderer.render(scene, camera);
 }
