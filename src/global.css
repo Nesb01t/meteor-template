@@ -4,10 +4,11 @@
 
 /* text and list */
 p {
-  @apply text-sm ml-[8px] inline;
+  @apply text-sm inline;
 }
 
-ul, ol {
+ul,
+ol {
   @apply flex flex-col items-start gap-2 my-2;
 }
 
@@ -19,7 +20,8 @@ ol li {
   @apply text-sm ml-[10px] list-decimal list-inside;
 }
 
-li ul, li ol {
+li ul,
+li ol {
   @apply ml-[16px];
 }
 
@@ -37,7 +39,8 @@ h3 {
 }
 
 /* code */
-p > code, li > code {
+p>code,
+li>code {
   @apply bg-info-content rounded-lg px-1.5 py-0.5;
 }
 
@@ -57,4 +60,17 @@ pre.astro-code code {
 
 .article h2 {
   @apply border-b-2;
+}
+
+.article h1:not(:first-child) {
+  @apply mt-[110px];
+}
+
+.article h2,
+.article h3 {
+  @apply mt-[20px];
+}
+
+.article a {
+  @apply text-info;
 }
