@@ -2,28 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 文字段落 */
-ol li,
+/* text and list */
 p {
-  @apply text-sm h-[24px] ml-[8px];
+  @apply text-sm ml-[8px] inline;
 }
 
-/* 列表 */
+ul, ol {
+  @apply flex flex-col items-start gap-2 my-2;
+}
+
 ul li {
-  @apply text-sm h-[24px] ml-[10px] list-disc list-inside;
+  @apply text-sm ml-[10px] list-disc list-inside;
 }
 
-/* 标题 */
+ol li {
+  @apply text-sm ml-[10px] list-decimal list-inside;
+}
+
+li ul, li ol {
+  @apply ml-[16px];
+}
+
+/* header */
 h1 {
-  @apply text-2xl font-bold mb-[8px];
+  @apply text-3xl font-bold mb-[8px];
 }
 
 h2 {
-  @apply text-xl font-bold mb-[8px];
+  @apply text-2xl font-bold mb-[8px];
 }
 
 h3 {
   @apply text-lg font-bold mb-[8px];
+}
+
+/* code */
+p > code, li > code {
+  @apply bg-info-content rounded-lg px-1.5 py-0.5;
 }
 
 /* code mockup */
@@ -33,4 +48,13 @@ pre.astro-code {
 
 pre.astro-code code {
   @apply flex flex-col ml-6;
+}
+
+/* ONLY articles */
+.article h1 {
+  @apply border-b-4;
+}
+
+.article h2 {
+  @apply border-b-2;
 }

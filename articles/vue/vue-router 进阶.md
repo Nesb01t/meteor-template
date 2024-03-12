@@ -11,7 +11,6 @@ date: '2024/3/12'
 route 对象是一个响应式对象，他的任何属性都可以被监听，大多数情况下应该监听期望改变的参数例如 `route.params.id`
 
 - 导航守卫可以使用 `import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'`
-
 - useLink 和 RouterLink 的 v-slot 值相仿，可以作为 hook 直接使用
 
 ### RouterView 插槽

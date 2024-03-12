@@ -4,7 +4,7 @@ const { article } = Astro.props;
 
 <div class="article-list-item">
   <div class="tooltip" data-tip="点击跳转">
-    <a class="btn btn-ghost btn-sm" href={'article/' + article.title}>
+    <a class="btn btn-ghost btn-sm" href={'/article/' + article.title}>
       <li class="align-left">
         <span>
           {article.title}
