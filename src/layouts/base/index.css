@@ -4,5 +4,6 @@ body {
 }
 
 main {
-  @apply flex flex-col items-center mx-auto max-w-[800px];
+  @apply flex flex-col items-center mx-auto max-w-[1000px] p-12 rounded-xl shadow-2xl backdrop-blur-[1px];
+  background-color: rgba(234, 234, 234, 0.95);
 }

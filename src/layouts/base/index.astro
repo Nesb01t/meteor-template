@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import Navbar from '@components/navbar/index.astro';
+import ModelBg from "@components/model-bg/index.astro"
 import '../../global.css';
 import './index.css';
 ---
@@ -11,11 +12,11 @@ import './index.css';
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.svg" />
     <title>🌠 meteor blog</title>
-    <ViewTransitions />
   </head>
   <body>
+    <ModelBg transition:persist />
     <Navbar />
-    <main>
+    <main transition:animate="slide">
       <slot />
     </main>
   </body>

@@ -21,6 +21,8 @@
   "dependencies": {
     "@astrojs/check": "^0.5.6",
     "@astrojs/ts-plugin": "^1.5.3",
-    "astro-icon": "^1.1.0"
+    "@types/three": "^0.162.0",
+    "astro-icon": "^1.1.0",
+    "three": "^0.162.0"
   }
 }
