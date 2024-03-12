@@ -4,6 +4,7 @@ import AstroIcon from '@components/badge-set/astro-icon.astro';
 import Markdown from '@components/badge-set/markdown.astro';
 import ItemGroup from './item-group.astro';
 import Java from '@components/badge-set/java.astro';
+import Vue from '@components/badge-set/vue.astro';
 import Html from '@components/badge-set/html.astro';
 import StarFill from '@components/badge-set/star-fill.astro';
 ---
@@ -20,14 +21,19 @@ import StarFill from '@components/badge-set/star-fill.astro';
   <ItemGroup tag="astro" />
 
   <div class="article-divider">
-    <Java />
-  </div>
-  <ItemGroup tag="java" />
-
-  <div class="article-divider">
     <Html />
   </div>
   <ItemGroup tag="html" />
+
+  <div class="article-divider">
+    <Vue />
+  </div>
+  <ItemGroup tag="vue" />
+
+  <div class="article-divider">
+    <Java />
+  </div>
+  <ItemGroup tag="java" />
 
   <div class="article-divider">
     <Markdown />
