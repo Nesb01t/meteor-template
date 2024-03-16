@@ -35,3 +35,8 @@ HDR 在 post-processing 开启
 2. MyDockFinder
 
 MyDockFinder 和 wallpaper engine 都在 steam 上，均是云端配置同步的，迁移简单
+
+### 必备小工具
+
+1. TwinkleTray 直接在 OS 里修改显示器亮度，还支持多屏同步和一键休眠 (MyDockFinder 中也有调整亮度功能)
+2. MacType 让 Windows 字体显示效果更好

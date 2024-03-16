@@ -63,7 +63,7 @@ HTML 中每一个元素都被视为拥有4个区域的盒子
 
 默认的是 content-box，如果 width = 100px，那就是 100px，任何 padding 和 border 都会在这个基础上增加
 
-border-box 将会包含 padding 和 border，导致最终宽度一定是 100px
+而 border-box 将会包含 padding 和 border，导致最终宽度一定是 100px
 
 ## filter
 
