@@ -39,8 +39,8 @@ h3 {
 }
 
 /* code */
-p>code,
-li>code {
+p > code,
+li > code {
   @apply bg-info-content rounded-lg px-1.5 py-0.5;
 }
 

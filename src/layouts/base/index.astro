@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import Navbar from '@components/navbar/index.astro';
 import ModelBg from '@components/model-bg/index.astro';
+import Footer from '@components/footer/index.astro';
 import '../../global.css';
 import './index.css';
 ---
@@ -15,6 +16,12 @@ import './index.css';
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-sacle=1, maximum-scale=1"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Sans+SC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>🌠 meteor blog</title>
   </head>
   <body>
@@ -23,5 +30,6 @@ import './index.css';
     <main transition:animate="slide">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

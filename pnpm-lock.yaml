@@ -31,9 +31,12 @@ devDependencies:
   '@iconify-json/mdi':
     specifier: ^1.1.64
     version: 1.1.64
+  '@iconify-json/mingcute':
+    specifier: ^1.1.17
+    version: 1.1.17
   astro:
     specifier: ^3.4.0
-    version: registry.npmmirror.com/astro@3.4.0(typescript@5.2.2)
+    version: registry.npmmirror.com/astro@3.4.0(sass@1.74.1)(typescript@5.2.2)
   autoprefixer:
     specifier: ^10.4.2
     version: 10.4.17(postcss@8.4.31)
@@ -49,6 +52,9 @@ devDependencies:
   prettier-plugin-astro:
     specifier: ^0.12.1
     version: registry.npmmirror.com/prettier-plugin-astro@0.12.1
+  sass:
+    specifier: ^1.74.1
+    version: 1.74.1
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -566,6 +572,12 @@ packages:
 
   /@iconify-json/mdi@1.1.64:
     resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/mingcute@1.1.17:
+    resolution: {integrity: sha512-WTKnn5OicUo18dE3rkJs00sUjOIAui8Ut9yZSXamRfjzmLxuX9FKqYQAbFXaV6lw0T4QwBQ8/y4ftaWl/1Entg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -1286,6 +1298,10 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: false
 
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
+    dev: true
+
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     dependencies:
@@ -1745,6 +1761,16 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
 
+  /sass@1.74.1:
+    resolution: {integrity: sha512-w0Z9p/rWZWelb88ISOLyvqTWGmtmu2QJICqDBGyNnfG4OUnPX9BBjjYIXUpXCMOOg5MQWNpqzt876la1fsTvUA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.5
+      source-map-js: 1.0.2
+    dev: true
+
   /semver@7.5.4:
     resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
     engines: {node: '>=10'}
@@ -2187,7 +2213,7 @@ packages:
       astro: ^3.3.0
     dependencies:
       '@astrojs/prism': registry.npmmirror.com/@astrojs/prism@3.0.0
-      astro: registry.npmmirror.com/astro@3.4.0(typescript@5.2.2)
+      astro: registry.npmmirror.com/astro@3.4.0(sass@1.74.1)(typescript@5.2.2)
       github-slugger: registry.npmmirror.com/github-slugger@2.0.0
       import-meta-resolve: registry.npmmirror.com/import-meta-resolve@3.0.0
       mdast-util-definitions: registry.npmmirror.com/mdast-util-definitions@6.0.0
@@ -2775,7 +2801,7 @@ packages:
     version: 2.0.1
     dev: true
 
-  registry.npmmirror.com/astro@3.4.0(typescript@5.2.2):
+  registry.npmmirror.com/astro@3.4.0(sass@1.74.1)(typescript@5.2.2):
     resolution: {integrity: sha512-nTOFxrPOnmACl8noTPkRJkaEOMx4wZy4QCLB2aDL3Lm+AiEaVcgH7YQ4GpCl72zSNXp/A7hGdUgcXbC4XYHOCQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/astro/-/astro-3.4.0.tgz}
     id: registry.npmmirror.com/astro/3.4.0
     name: astro
@@ -2835,7 +2861,7 @@ packages:
       tsconfck: registry.npmmirror.com/tsconfck@3.0.0(typescript@5.2.2)
       unist-util-visit: registry.npmmirror.com/unist-util-visit@4.1.2
       vfile: registry.npmmirror.com/vfile@5.3.7
-      vite: registry.npmmirror.com/vite@4.5.0
+      vite: registry.npmmirror.com/vite@4.5.0(sass@1.74.1)
       vitefu: registry.npmmirror.com/vitefu@0.2.5(vite@4.5.0)
       which-pm: registry.npmmirror.com/which-pm@2.1.1
       yargs-parser: registry.npmmirror.com/yargs-parser@21.1.1
@@ -5093,7 +5119,7 @@ packages:
     dependencies:
       nanoid: registry.npmmirror.com/nanoid@3.3.6
       picocolors: 1.0.0
-      source-map-js: registry.npmmirror.com/source-map-js@1.0.2
+      source-map-js: 1.0.2
     dev: true
 
   registry.npmmirror.com/prebuild-install@7.1.1:
@@ -5563,13 +5589,6 @@ packages:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/sisteransi/-/sisteransi-1.0.5.tgz}
     name: sisteransi
     version: 1.0.5
-    dev: true
-
-  registry.npmmirror.com/source-map-js@1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz}
-    name: source-map-js
-    version: 1.0.2
-    engines: {node: '>=0.10.0'}
     dev: true
 
   registry.npmmirror.com/space-separated-tokens@2.0.2:
@@ -6074,8 +6093,9 @@ packages:
       vfile-message: registry.npmmirror.com/vfile-message@4.0.2
     dev: true
 
-  registry.npmmirror.com/vite@4.5.0:
+  registry.npmmirror.com/vite@4.5.0(sass@1.74.1):
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.5.0.tgz}
+    id: registry.npmmirror.com/vite/4.5.0
     name: vite
     version: 4.5.0
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -6107,6 +6127,7 @@ packages:
       esbuild: registry.npmmirror.com/esbuild@0.18.20
       postcss: registry.npmmirror.com/postcss@8.4.31
       rollup: registry.npmmirror.com/rollup@3.29.4
+      sass: 1.74.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
@@ -6122,7 +6143,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: registry.npmmirror.com/vite@4.5.0
+      vite: registry.npmmirror.com/vite@4.5.0(sass@1.74.1)
     dev: true
 
   registry.npmmirror.com/web-namespaces@2.0.1:

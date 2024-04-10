@@ -1,0 +1,70 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="footer">
+  <div class="footer-meteor">
+    <div class="text-lg">🌠 Meteor Template</div>
+    <div>Bulit by Nesb01t</div>
+    <div>Powered by Astro</div>
+  </div>
+
+  <div class="footer-sites">
+    <div class="footer-sites__title">
+      <div class="text-lg">🔗 About</div>
+      <div>social links</div>
+      <div>websites</div>
+    </div>
+    <div class="footer-sites__item">
+      <Icon name="mingcute:github-fill" size={27} />
+      <div>GitHub</div>
+    </div>
+    <div class="footer-sites__item">
+      <Icon name="mingcute:star-fill" size={27} />
+      <div>EachStar</div>
+    </div>
+    <div class="footer-sites__item">
+      <Icon name="mingcute:bookmarks-fill" size={27} />
+      <div>Juejin</div>
+    </div>
+    <div class="footer-sites__item">
+      <Icon name="mingcute:qq-fill" size={27} />
+      <div>QQ</div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .footer {
+    @apply flex items-center justify-center;
+    @apply h-[80px] mt-[80px] w-full;
+
+    color: #aaa;
+    background: repeating-linear-gradient(
+      45deg,
+      #222,
+      #222 10px,
+      #111 10px,
+      #111 20px
+    );
+
+    &-meteor {
+      @apply flex flex-col justify-center items-start gap-0;
+      @apply text-xs;
+    }
+
+    &-sites {
+      @apply flex items-center gap-4;
+
+      &__title {
+        @apply text-xs;
+      }
+
+      &__item {
+        @apply flex flex-col items-center justify-center text-xs;
+        @apply ml-4 cursor-pointer;
+        color: #9d9f8b;
+      }
+    }
+  }
+</style>

@@ -2,26 +2,26 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<div class="navbar-wrapper">
-  <div class="navbar rounded-lg">
+<div class="navbar">
+  <div class="navbar-content">
     <div class="flex-1">
-      <button class="btn glass">
-        <Icon name="mage:note-fill" />
+      <button class="btn btn-ghost">
+        <Icon class="text-[22px]" name="mage:note-fill" />
         <span class="navbar__title">nesb01t</span>
-        <div class="navbar__subtitle">web & game buffs</div>
+        <!-- <div class="navbar__subtitle">web & game buffs</div> -->
       </button>
     </div>
     <div class="flex-none gap-2">
       <div class="tooltip tooltip-bottom" data-tip="博客列表">
         <a class="btn btn-ghost" href="/article">
           <Icon name="mage:folder-2-fill" />
-           articles</a
+           article</a
         >
       </div>
       <div class="tooltip tooltip-bottom" data-tip="项目列表">
         <a class="btn btn-ghost" href="/project">
           <Icon name="mage:box-3d-fill" />
-           projects</a
+           project</a
         >
       </div>
       <div class="tooltip tooltip-bottom" data-tip="关于我">
@@ -33,21 +33,27 @@ import { Icon } from 'astro-icon/components';
     </div>
   </div>
 </div>
-<div class="bfc-killer"></div>
 
-<style>
-  .navbar-wrapper {
-    @apply fixed px-8 py-1 top-0 left-0 right-0 z-10 backdrop-blur shadow;
-    background-color: rgba(234, 234, 234, 0.9);
+<style lang="scss">
+  .navbar {
+    @apply h-[50px];
+    @apply flex justify-center p-0 shadow;
+
+    &-content {
+      @apply w-[1200px];
+      @apply backdrop-blur;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      @apply text-primary font-light;
+    }
   }
 
-  .navbar__subtitle {
-    @apply text-primary font-light;
-  }
-
-  .bfc-killer {
-    height: 120px;
-  }
   @media (max-width: 1000px) {
     .navbar__subtitle {
       @apply hidden;
