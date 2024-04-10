@@ -4,15 +4,169 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <BaseLayout>
-  <h1>About</h1>
-  <div class="about">
-    <Icon class="mb-2" :size="40" name="mage:box-3d-scan-fill" />
-     施工中...
+  <div class="index">
+    <div class="index-hero">
+      <h1 class="mb-4">Nesb01t's blog</h1>
+      <div>👋你好啊, 这里是 nesb01t 的博客</div>
+      <div>我来自 cn, 喜欢前端 & 游戏开发, 目前大三在读</div>
+    </div>
+
+    <div class="index-tech">
+      <h2>Tech Stack</h2>
+      <div class="index-tech__block">
+        <div class="apps">
+          <div class="app-title">Web 框架</div>
+          <div class="app">
+            <Icon name="logos:nuxt-icon" />nuxtjs
+          </div>
+          <div class="app">
+            <Icon name="logos:vue" />vue
+          </div>
+          <div class="app">
+            <Icon name="logos:vueuse" />vueuse
+          </div>
+          <div class="app">
+            <Icon name="logos:nextjs-icon" />nextjs
+          </div>
+          <div class="app">
+            <Icon name="logos:react" />react
+          </div>
+          <div class="app">
+            <Icon name="logos:svelte-icon" />svelte
+          </div>
+          <div class="app">
+            <Icon name="logos:hexo" />hexo
+          </div>
+          <div class="app">
+            <Icon name="logos:astro-icon" />astro
+          </div>
+        </div>
+
+        <div class="apps">
+          <div class="app-title">Web 设计</div>
+          <div class="app">
+            <Icon name="logos:element" />element
+          </div>
+          <div class="app">
+            <Icon name="logos:ant-design" />antd
+          </div>
+          <div class="app">
+            <Icon name="logos:headlessui-icon" />headless
+          </div>
+          <div class="app"><Icon name="logos:d3" />d3js</div>
+          <div class="app">
+            <Icon name="logos:threejs" />threejs
+          </div>
+          <div class="app">
+            <Icon name="logos:tailwindcss-icon" />tailwind
+          </div>
+          <div class="app">
+            <Icon name="logos:sass" />sass
+          </div>
+          <div class="app"><Icon name="logos:adobe-animate" />animejs</div>
+          <div class="app"><Icon name="logos:leaflet" />gis</div>
+        </div>
+
+        <div class="apps">
+          <div class="app-title">客户端</div>
+          <div class="app"><Icon name="logos:electron" />electron</div>
+          <div class="app"><Icon name="logos:tauri" />tauri</div>
+          <div class="app"><Icon name="logos:ionic-icon" />ionic</div>
+          <div class="app">
+            <Icon name="logos:capacitorjs-icon" />capacitor
+          </div>
+          <div class="app">
+            <Icon name="logos:flutter" />flutter
+          </div>
+          <div class="app"><Icon name="logos:unity" />unity</div>
+          <div class="app">
+            <Icon name="logos:unrealengine-icon" />unreal
+          </div>
+          <div class="app"><Icon name="logos:dotnet" />avalonia</div>
+          <div class="app">
+            <Icon name="logos:microsoft-windows-icon" />win32 api
+          </div>
+        </div>
+
+        <div class="apps">
+          <div class="app-title">BFF / 质量</div>
+          <div class="app">
+            <Icon name="logos:nodejs-icon" />nodejs
+          </div>
+          <div class="app"><Icon name="logos:nestjs" />nestjs</div>
+          <div class="app"><Icon name="logos:ktor-icon" />ktor</div>
+          <div class="app"><Icon name="logos:vitejs" />vite</div>
+          <div class="app"><Icon name="logos:vitest" />vitest</div>
+          <div class="app"><Icon name="logos:jest" />jest</div>
+          <div class="app"><Icon name="logos:eslint" />eslint</div>
+          <div class="app"><Icon name="logos:prettier" />prettier</div>
+          <div class="app"><Icon name="logos:postgresql" />postgresql</div>
+        </div>
+
+        <div class="apps">
+          <div class="app-title">工具 / 开发</div>
+          <div class="app">
+            <Icon name="logos:blender" />
+             blender
+          </div>
+          <div class="app">
+            <Icon name="logos:chrome-web-store" />extension
+          </div>
+          <div class="app"><Icon name="logos:git-icon" />git</div>
+          <div class="app"><Icon name="logos:docker-icon" />docker</div>
+          <div class="app"><Icon name="logos:jenkins" />jenkins</div>
+          <div class="app"><Icon name="logos:github-icon" />github</div>
+          <div class="app"><Icon name="logos:figma" />figma</div>
+          <div class="app"><Icon name="logos:postman-icon" />postman</div>
+        </div>
+
+        <div class="apps">
+          <div class="app-title">常用软件</div>
+          <div class="app">
+            <Icon name="logos:notion-icon" />notion
+          </div>
+          <div class="app"><Icon name="logos:obsidian-icon" />obsidian</div>
+          <div class="app"><Icon name="logos:codepen-icon" />codepen</div>
+          <div class="app"><Icon name="logos:visual-studio-code" />code</div>
+        </div>
+
+        <div class="apps">
+          <div class="app-title">常用语言</div>
+          <div class="app">
+            <Icon name="logos:typescript-icon" />typescript
+          </div>
+          <div class="app"><Icon name="logos:c-sharp" />c#</div>
+          <div class="app"><Icon name="logos:kotlin-icon" />kotlin</div>
+          <div class="app"><Icon name="logos:python" />python</div>
+          <div class="app"><Icon name="logos:lua" />lua</div>
+        </div>
+      </div>
+    </div>
   </div>
 </BaseLayout>
 
-<style>
-  .name > div {
-    @apply h-24;
+<style lang="scss">
+  .index {
+    @apply w-full h-full flex flex-col gap-4;
+    &-hero {
+      @apply w-full p-6 rounded-xl;
+      background: linear-gradient(90deg, #ededed81 0%, #edfbff99 100%);
+    }
+
+    &-tech {
+      @apply p-6 rounded-xl;
+      background: linear-gradient(90deg, #e7f3d8bf 0%, #bbf0ff99 100%);
+
+      &__block {
+        @apply p-4 flex gap-[70px];
+      }
+    }
+  }
+
+  .app-title {
+    @apply text-lg font-semibold my-2;
+  }
+  .app {
+    @apply flex justify-between items-center gap-1 text-sm w-[90px];
   }
 </style>
