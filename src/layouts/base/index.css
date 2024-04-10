@@ -6,5 +6,5 @@ body {
 }
 
 main {
-  @apply flex flex-1 flex-col items-center mx-auto w-full max-w-[1200px] pt-[50px] px-[20px];
+  @apply flex flex-1 flex-col items-center mx-auto w-full max-w-[1200px] pt-[20px] px-[20px];
 }

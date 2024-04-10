@@ -1,21 +1,22 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const { article } = Astro.props;
 ---
 
 <div class="article-list-item">
-  <div class="tooltip" data-tip="点击跳转">
-    <a class="btn btn-ghost btn-sm" href={'/article/' + article.title}>
-      <li class="align-left">
-        <span>
-          {article.title}
-        </span>
-      </li>
+  <div class="tooltip ml-2" data-tip="点击跳转">
+    <a class="btn btn-ghost btn-xs" href={'/article/' + article.title}>
+      <div class="w-full flex gap-2 items-center">
+        <Icon name="mingcute:play-fill" size={10} />
+        {article.title}
+      </div>
       <!--<div class="badge badge-ghost badge-sm">{article.tag}</div>-->
     </a>
   </div>
-  <span class="release-date">
+  <div class="release-date">
     {article.date}
-  </span>
+  </div>
 </div>
 
 <style>

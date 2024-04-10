@@ -5,14 +5,16 @@ const { icon, name, color } = Astro.props;
 ---
 
 <div class="base-badge">
-  <Icon name={icon} />
+  <Icon name={icon} size={24} />
   {name}
 </div>
 
 <style>
   .base-badge {
-    @apply badge badge-ghost border-none rounded-lg gap-1;
-    text-shadow: none;
-    background: linear-gradient(#e1e1e1, #ffffff);
+    @apply badge badge-ghost border-none rounded gap-2 h-[40px] my-2 shadow-sm;
+    font-size: 16px;
+    text-shadow: black 1px 0px 3px;
+    color: white;
+    background-color: rgba(177, 177, 177, 0.2);
   }
 </style>

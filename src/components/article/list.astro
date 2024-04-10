@@ -11,57 +11,54 @@ import Unreal from '@components/badge-set/unreal.astro';
 ---
 
 <div class="article-list">
-  <div class="article-divider">
+  <div class="article-group">
     <Linux />
+    <ItemGroup tag="linux" />
   </div>
-  <ItemGroup tag="linux" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <AstroIcon />
+    <ItemGroup tag="astro" />
   </div>
-  <ItemGroup tag="astro" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <Html />
+    <ItemGroup tag="html" />
   </div>
-  <ItemGroup tag="html" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <Vue />
+    <ItemGroup tag="vue" />
   </div>
-  <ItemGroup tag="vue" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <Java />
+    <ItemGroup tag="java" />
   </div>
-  <ItemGroup tag="java" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <Unreal />
+    <ItemGroup tag="unreal" />
   </div>
-  <ItemGroup tag="unreal" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <Markdown />
+    <ItemGroup tag="markdown" />
   </div>
-  <ItemGroup tag="markdown" />
 
-  <div class="article-divider">
+  <div class="article-group">
     <StarFill />
+    <ItemGroup tag="star" />
   </div>
-  <ItemGroup tag="star" />
 </div>
 
-<style>
+<style lang="scss">
   .article-list {
-    @apply flex flex-col justify-start h-full items-start w-full gap-1;
+    @apply flex flex-wrap items-start w-full;
   }
 
-  .article-divider {
-    @apply divider;
-  }
-
-  .article-divider:not(:first-of-type) {
-    @apply mt-[60px];
+  .article-group {
+    @apply flex flex-col items-start justify-start w-1/2 box-border gap-1;
+    @apply p-4;
   }
 </style>

@@ -4,7 +4,10 @@ import BaseLayout from '@layouts/base/index.astro';
 ---
 
 <BaseLayout>
-  <h2>About</h2>
+  <div class="about-hero">
+    <h1 class="mb-4">About</h1>
+    <div>关于我</div>
+  </div>
   <div class="about">
     <Icon class="mb-2" :size="40" name="mage:box-3d-scan-fill" />
      施工中...
@@ -12,6 +15,10 @@ import BaseLayout from '@layouts/base/index.astro';
 </BaseLayout>
 
 <style>
+  .about-hero {
+    @apply w-full p-6 rounded-xl;
+    background: linear-gradient(90deg, #e9eff0 0%, #cef8d4 100%);
+  }
   .about {
     @apply flex flex-col items-center text-2xl text-primary-focus w-full mt-[30px];
   }
