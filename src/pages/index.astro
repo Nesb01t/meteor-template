@@ -5,14 +5,41 @@ import { Icon } from 'astro-icon/components';
 
 <BaseLayout>
   <div class="index">
-    <div class="index-hero">
-      <h1 class="mb-4">Nesb01t's blog</h1>
+    <div class="index-hero relative overflow-hidden">
+      <h1 class="mb-4 flex items-center gap-1">
+        <Icon name="mingcute:book-2-fill" />Nesb01t's blog
+      </h1>
       <div>👋你好啊, 这里是 nesb01t 的博客</div>
       <div>我来自 cn, 喜欢前端 & 游戏开发, 目前大三在读</div>
+      <Icon
+        class="absolute bottom-[-40px] right-[-40px]"
+        size={180}
+        name="line-md:cog-loop"
+      />
+      <Icon
+        class="absolute bottom-[70px] right-[135px]"
+        size={110}
+        name="line-md:compass-twotone-loop"
+      />
+      <Icon
+        class="absolute bottom-[30px] right-[270px] show-only-large-screen"
+        size={80}
+        name="line-md:moon-alt-to-sunny-outline-loop-transition"
+      />
     </div>
 
-    <div class="index-tech">
-      <h2>Tech Stack</h2>
+    <div class="index-tech relative overflow-hidden">
+      <h2 class="flex items-center gap-1">
+        <Icon name="mingcute:box-3-fill" size={24} />Tech Stack
+      </h2>
+      <div class="absolute bottom-[-60px] right-[-92px]">
+        <Icon
+          name="line-md:loading-twotone-loop"
+          size={170}
+          class="anime-color"
+        />
+      </div>
+      <div>日常使用的技术栈和辅助工具 / 软件</div>
       <div class="index-tech__block">
         <div class="apps">
           <div class="app-title">Web 框架</div>
@@ -158,7 +185,7 @@ import { Icon } from 'astro-icon/components';
       background: linear-gradient(90deg, #e7f3d8bf 0%, #bbf0ff99 100%);
 
       &__block {
-        @apply p-4 flex gap-[70px];
+        @apply p-4 flex flex-wrap gap-[60px];
       }
     }
   }
@@ -168,5 +195,27 @@ import { Icon } from 'astro-icon/components';
   }
   .app {
     @apply flex justify-between items-center gap-1 text-sm w-[90px];
+  }
+
+  @media screen and (max-width: 768px) {
+    .show-only-large-screen {
+      @apply hidden md:block;
+    }
+  }
+
+  @keyframes key-color {
+    0% {
+      color: #a22b2b77;
+    }
+    50% {
+      color: #28972877;
+    }
+    100% {
+      color: #30309c77;
+    }
+  }
+
+  .anime-color {
+    animation: key-color 5s infinite ease;
   }
 </style>

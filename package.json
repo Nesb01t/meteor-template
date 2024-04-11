@@ -6,10 +6,10 @@
     "prettier": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "devDependencies": {
-    "@iconify-json/mingcute": "^1.1.17",
     "@iconify-json/logos": "^1.1.42",
     "@iconify-json/mage": "^1.1.0",
     "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/mingcute": "^1.1.17",
     "astro": "^3.4.0",
     "autoprefixer": "^10.4.2",
     "daisyui": "^3.9.2",
@@ -23,6 +23,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.6",
     "@astrojs/ts-plugin": "^1.5.3",
+    "@iconify-json/line-md": "^1.1.37",
     "@types/three": "^0.162.0",
     "astro-icon": "^1.1.0",
     "three": "^0.162.0"
