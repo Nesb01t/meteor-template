@@ -4,17 +4,11 @@ import { type Article, parseArticles } from '../../utils/glob';
 
 const posts = await Astro.glob('../../../articles/**/*.md');
 const articles: Article[] = parseArticles(posts);
-const articlesFilteredTags = (tag: string) => {
-  return articles.filter((a) => a.tag?.includes(tag));
-};
-
-const { tag } = Astro.props;
+const timeSortedArticles = articles.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
 ---
 
 <>
-  {
-    articlesFilteredTags(tag).map((a) => (
-      <ArticleItem class="w-full" article={a} />
-    ))
-  }
+  {timeSortedArticles.map((a) => <ArticleItem class="w-full" article={a} />)}
 </>

@@ -1,65 +1,13 @@
 ---
-import Linux from '@components/badge-set/linux.astro';
-import AstroIcon from '@components/badge-set/astro-icon.astro';
-import Markdown from '@components/badge-set/markdown.astro';
 import ItemGroup from './item-group.astro';
-import Java from '@components/badge-set/java.astro';
-import Vue from '@components/badge-set/vue.astro';
-import Html from '@components/badge-set/html.astro';
-import StarFill from '@components/badge-set/star-fill.astro';
-import Unreal from '@components/badge-set/unreal.astro';
-import Blueprint from '@components/badge-set/blueprint.astro';
 ---
 
 <div class="article-list">
-  <div class="article-group">
-    <Linux />
-    <ItemGroup tag="linux" />
-  </div>
-
-  <div class="article-group">
-    <AstroIcon />
-    <ItemGroup tag="astro" />
-  </div>
-
-  <div class="article-group">
-    <Html />
-    <ItemGroup tag="html" />
-  </div>
-
-  <div class="article-group">
-    <Vue />
-    <ItemGroup tag="vue" />
-  </div>
-
-  <div class="article-group">
-    <Java />
-    <ItemGroup tag="java" />
-  </div>
-
-  <div class="article-group">
-    <Unreal />
-    <ItemGroup tag="unreal" />
-  </div>
-
-  <div class="article-group">
-    <Markdown />
-    <ItemGroup tag="markdown" />
-  </div>
-
-  <div class="article-group">
-    <Blueprint />
-    <ItemGroup tag="star" />
-  </div>
+  <ItemGroup />
 </div>
 
 <style lang="scss">
   .article-list {
-    @apply flex flex-wrap items-start w-full;
-  }
-
-  .article-group {
-    @apply flex flex-col items-start justify-start w-1/2 box-border gap-1;
-    @apply p-4;
+    @apply gap-2 pr-4 flex flex-wrap items-start w-full;
   }
 </style>

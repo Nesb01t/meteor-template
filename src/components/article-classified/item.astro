@@ -6,7 +6,7 @@ const { article } = Astro.props;
 
 <div class="article-list-item">
   <div class="tooltip ml-2" data-tip="点击跳转">
-    <a class="btn btn-ghost" href={'/article/' + article.title}>
+    <a class="btn btn-ghost btn-xs" href={'/article/' + article.title}>
       <div class="w-full flex gap-2 items-center">
         <Icon name="mingcute:play-fill" size={10} />
         {article.title}
@@ -21,10 +21,10 @@ const { article } = Astro.props;
 
 <style>
   .article-list-item {
-    @apply w-full flex items-center h-[35px];
+    @apply w-full flex items-center;
   }
 
   .release-date {
-    @apply ml-auto text-primary-focus cursor-default;
+    @apply ml-auto text-primary-focus cursor-default text-sm;
   }
 </style>
