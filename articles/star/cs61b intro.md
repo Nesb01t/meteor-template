@@ -3,7 +3,7 @@ tag: 'star'
 date: '2024/4/17'
 ---
 
-# cs61b 简短版
+# cs61b intro
 
 [fa23 课程传送门](https://fa23.datastructur.es/)
 
