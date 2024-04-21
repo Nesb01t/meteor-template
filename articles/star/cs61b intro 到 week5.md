@@ -65,7 +65,7 @@ Project 1B:
 
 | 名词 ADT Abstract Data Type
 
-### week5
+### week4
 
 使用 throw new Error 异常中止控制流, 无论如何用户都应该知道在异常出现的时候发生了什么 (当然也可以判断 null 或者返回一个特殊值, 但如果悄无声息, 用户就不知道发生了什么)
 
@@ -75,3 +75,53 @@ Project 1C:
 
 - 将 ArrayDeque 和 LinkedListDeque 整合到一起
 - GuitarHero 算法模拟真实世界吉他发声 (好玩的算法)
+
+### week5
+
+Lab 05(可选): 估计算法用时
+
+- 估计 斐波那契数列 / 数组扩容 消耗的时间
+- 直观通过图表展示算法的时间复杂度`
+
+### week6
+
+Lab 06: 并查集
+
+1. 加权快速 (计算权重)
+2. 路径压缩 (记忆根节点)
+   在每次调用 Find 的时候设置根节点
+
+Homework 2: 蒙特卡洛模拟渗流阈值
+
+数学 / 物理背景相关，也是非常好玩的题目
+
+### week7
+
+Lab 07: BSTMap (Binary Search Tree Map)
+
+- 实现一个二叉搜索树
+
+Project 2A:
+
+- Google NGram 记录了所有历史观察到的单词
+- 利用 Tree 实现一个后端返回 Time Seris
+- 大量用了 Map 结构
+
+### week8
+
+Lab 08: LLRB (Left-Leaning Red-Black) Trees
+
+- 结合文档中提到的 Lecture Clips 还有一个 Demo 做一个红黑树
+- 实现左倾红黑树
+
+Project 2B:
+
+- 完善 Project 2A 中的程序并运行 Web Server 来展示内容
+- 根据 hyponyms 和 synset 构建一个连接图
+
+### week10
+
+Lab 09: MyHashMap 自己实现一个哈希表
+
+- 给桶扩容
+- 比较 ArrayList / LinkedList / ArrayDeque 的性能
