@@ -3,14 +3,14 @@ tag: 'astro'
 date: '2024/3/2'
 ---
 
-## TODO
+# TODO
 
 - [ ] 支持侧边栏目录导航
 - [ ] 支持 tag 分类筛选
-- [X] 支持 p > code
-- [X] articles tag 方便增加
+- [x] 支持 p > code
+- [x] articles tag 方便增加
 
-### Configuration
+## Configuration
 
 - [ ] 添加分类 tag article/item-group
 

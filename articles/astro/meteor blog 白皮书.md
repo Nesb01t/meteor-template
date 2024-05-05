@@ -3,7 +3,7 @@ tag: 'astro'
 date: '2024/3/2'
 ---
 
-### 图标用法
+# 图标用法
 
 1. 参考第三方 astro-icon 包
 2. 需要安装图标包比如 `@ant-design/icons`
@@ -19,7 +19,7 @@ interface IconProps {
 }
 ```
 
-### daisyUI
+# daisyUI
 
 主题配置文件 `tailwind.config.js` 中配置
 

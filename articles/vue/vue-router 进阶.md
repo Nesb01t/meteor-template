@@ -2,6 +2,7 @@
 tag: 'vue'
 date: '2024/3/12'
 ---
+
 ## vue-router
 
 ### 组合式 API 用法
@@ -16,6 +17,7 @@ route 对象是一个响应式对象，他的任何属性都可以被监听，�
 ### RouterView 插槽
 
 在这里可以套 keep-alive 和 transition, 也可以传递一些 props 进去
+
 - 另外可以把模板引用 ref 写在 component 上面，否则将会被 RouterView 的实例填充而不是路由组件本身
 
 ```html
@@ -27,6 +29,7 @@ route 对象是一个响应式对象，他的任何属性都可以被监听，�
 ```
 
 Vue 可能会自动复用组件而忽略过渡，加一个 key 属性就可以了
+
 ```html
 <router-view v-slot="{ Component, route }">
   <transition name="fade">
@@ -35,8 +38,8 @@ Vue 可能会自动复用组件而忽略过渡，加一个 key 属性就可以�
 </router-view>
 ```
 
-
 ### 保留滚动条
+
 当你切换路由时想让页面滚动到顶部或是保持原先的滚动位置，可以给 route 提供一个 scrollBehavior 方法
 
 ```js
@@ -82,14 +85,16 @@ const router = createRouter({
 ```
 
 ### 路由懒加载
+
 如果我们能把不同路由的组件分成不同的代码块，当路由访问才加载，打包就会更高效
 
 Vue Router 支持开箱即用的动态导入
+
 ```js
 // 将
 // import UserDetails from './views/UserDetails.vue'
 // 替换成
-const UserDetails = () => import('./views/UserDetails.vue')
+const UserDetails = () => import('./views/UserDetails.vue');
 ```
 
 如果你使用的是 webpack 之类的打包器，它将自动从代码分割中受益。
@@ -107,22 +112,23 @@ vue-router v4.1 的新功能
 这样会导致不管有没有 push 成功都会直接关闭
 
 ```js
-await router.push('/my-profile')
-this.isMenuOpen = false
+await router.push('/my-profile');
+this.isMenuOpen = false;
 ```
 
 可以使用如下代码来检测
 
 ```js
-const navigationResult = await router.push('/my-profile')
+const navigationResult = await router.push('/my-profile');
 
 if (navigationResult) {
   // 导航被阻止
 } else {
   // 导航成功 (包括重新导航的情况)
-  this.isMenuOpen = false
+  this.isMenuOpen = false;
 }
 ```
+
 还有一些更高级的检测请查看官网 [Vue Router 官网](https://router.vuejs.org/zh/guide/advanced/navigation-failures.html)
 
 ### 动态路由

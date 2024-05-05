@@ -3,7 +3,7 @@ tag: 'java'
 date: '2024/3/10'
 ---
 
-## 版本声明
+# 版本声明
 
 - minecraft 1.20.4
 - spigot r0.1
