@@ -3,9 +3,9 @@ tag: 'vue'
 date: '2024/3/12'
 ---
 
-## vue-router
+# vue-router
 
-### 基础
+## 基础
 
 1. 使用 router-link 组件进行导航
    且使用 router-view 来展示路由页面
@@ -46,7 +46,7 @@ date: '2024/3/12'
    - 和添加 alias 一样添加 props: true, 此时 route.params 就被视作组件的 props
    - 如果 props 就是一个对象，那么就直接变成组件的 props
 
-### 历史记录模式
+## 历史记录模式
 
 1. Hash 模式
    使用 createWebHashHistory，加了一个 # 符号，对 SEO 有不好影响
@@ -60,7 +60,7 @@ date: '2024/3/12'
    - 唯一要做的就是在服务器上添加一个简单的回退路由
    - 如果 URL 不匹配任何静态资源，它仍应提供与你 index.html 中相同的画面，这就解决了
 
-### 导航守卫
+## 导航守卫
 
 router 的导航守卫主要以跳转或取消的方式工作，植入路由守卫的方式有很多：全局的，单个路由独享，组件级的
 
@@ -79,20 +79,20 @@ router 的导航守卫主要以跳转或取消的方式工作，植入路由守�
 - beforeResolve 在被解析后调用
 - afterEach 后置钩子
 
-### 守卫中的全局注入
+## 守卫中的全局注入
 
 从 Vue3.3 开始可以在导航守卫中使用 inject() 方法，在注入 pinia 之类的东西时很有用
 
 - 在 app.provide 中提供的所有内容都可以在 router 钩子上面通过 inject() 得到
 
-### 路由和组件级的守卫
+## 路由和组件级的守卫
 
 - 你可以在路由上直接配置守卫钩子
 - beforeEach 只在进入路由的时候触发，不会在 params，query 改变时触发
 - 组件级使用 setup，参考后面组合式 API 部分
 - 完整的路由生命周期参考 [vue-router 官网](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%AE%8C%E6%95%B4%E7%9A%84%E5%AF%BC%E8%88%AA%E8%A7%A3%E6%9E%90%E6%B5%81%E7%A8%8B)
 
-### 路由 meta
+## 路由 meta
 
 有时我们希望把信息附加到路由上，可以通过接受对象的 meta 属性来实现，在路由地址和导航守卫上都可以被访问到
 
@@ -104,7 +104,7 @@ router 的导航守卫主要以跳转或取消的方式工作，植入路由守�
 }
 ```
 
-### 导航和数据获取
+## 导航和数据获取
 
 有时进入某个路由我们希望从服务器获取数据，例如 fetchUsers，可以通过 2 个方式来实现
 

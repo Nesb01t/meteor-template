@@ -3,7 +3,7 @@ tag: 'unreal'
 date: '2024/5/4'
 ---
 
-# pixellab 使用教程
+# pixellab 安装
 
 [官方下载链接](https://www.pixellab.ai/account#installation)
 
@@ -14,6 +14,8 @@ date: '2024/5/4'
 3. 点击 Add Extension 并选择 piexllab 提供的 .aesprite-extension 文件
 4. 重启 aesprite 就可以看到新的 pixellab 窗口了
 
-## 文档
+## 概览
 
 见官方文档 [官方文档](https://www.pixellab.ai/docs)
+
+ctrl + space + p 可以打开 pixellab 窗口
