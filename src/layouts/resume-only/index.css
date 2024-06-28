@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply m-0 p-0;
+  @apply min-h-[100vh] flex flex-col;
+  font-family: 'Exo 2', 'Noto Sans SC', monospace, sans-serif;
+}
+
+main {
+  @apply w-[900px] mx-auto h-full;
+}

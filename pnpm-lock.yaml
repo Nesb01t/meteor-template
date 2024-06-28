@@ -11,9 +11,6 @@ dependencies:
   '@astrojs/ts-plugin':
     specifier: ^1.5.3
     version: 1.5.3
-  '@iconify-json/line-md':
-    specifier: ^1.1.37
-    version: 1.1.37
   '@types/three':
     specifier: ^0.162.0
     version: 0.162.0
@@ -25,6 +22,12 @@ dependencies:
     version: 0.162.0
 
 devDependencies:
+  '@iconify-json/akar-icons':
+    specifier: ^1.1.24
+    version: 1.1.24
+  '@iconify-json/line-md':
+    specifier: ^1.1.37
+    version: 1.1.37
   '@iconify-json/logos':
     specifier: ^1.1.42
     version: 1.1.42
@@ -46,9 +49,6 @@ devDependencies:
   daisyui:
     specifier: ^3.9.2
     version: 3.9.4
-  pnpm:
-    specifier: ^8.10.0
-    version: registry.npmmirror.com/pnpm@8.10.0
   prettier:
     specifier: ^3.0.3
     version: registry.npmmirror.com/prettier@3.0.3
@@ -561,11 +561,17 @@ packages:
     dev: true
     optional: true
 
+  /@iconify-json/akar-icons@1.1.24:
+    resolution: {integrity: sha512-u+vnp/k+Mp1PU1jZITGvbZit9g+LzvDo9C1GvwlFDCqEkCg/6SG74iqa8XkbdNKzcybT7vLlbo2OqI+ccylfqA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/line-md@1.1.37:
     resolution: {integrity: sha512-qGezTafsQOX4N2STOV0gsSw/vr0u7DPXtg0jpVQTIa9ht1IXN68O+Qy7Ia2dHbuW4w5nz3UyhJzNrh7NB5T7BA==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: false
+    dev: true
 
   /@iconify-json/logos@1.1.42:
     resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
@@ -5110,14 +5116,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: registry.npmmirror.com/find-up@4.1.0
-    dev: true
-
-  registry.npmmirror.com/pnpm@8.10.0:
-    resolution: {integrity: sha512-nCy4Pyts9qJdjFgwC/mRl8fvO+hM8+dm8pBUtAuDtC+Kq6b8wxSp7PJ8APfOgKdXu0xgiADnrb4tKdxccFb1vg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/pnpm/-/pnpm-8.10.0.tgz}
-    name: pnpm
-    version: 8.10.0
-    engines: {node: '>=16.14'}
-    hasBin: true
     dev: true
 
   registry.npmmirror.com/postcss@8.4.31:
