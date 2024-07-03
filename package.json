@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
-    "sync-submodules": "git pull && git submodule update --remote --merge",
+    "build:latest": "pnpm sync-submodules && pnpm build",
+    "sync-post": "git pull && git submodule update --remote --merge",
     "prettier": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "devDependencies": {
