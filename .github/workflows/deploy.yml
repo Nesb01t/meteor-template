@@ -17,16 +17,11 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
         with:
-          submodules: recursive
-
-      - name: Update submodules to the latest commit
-        run: git submodule update --remote --merge
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build your site
-        run: pnpm build
+          submodules: 'true'
+      - name: Install, build, and upload your site
+        uses: withastro/action@v1
+        with:
+          package-manager: pnpm@8
 
   deploy:
     needs: build
