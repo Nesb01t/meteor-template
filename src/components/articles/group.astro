@@ -1,0 +1,30 @@
+---
+import ArticleItem from './item.astro';
+import { type Article, parseArticles } from '../../utils/glob';
+
+const posts = await Astro.glob('../../../articles/**/*.md');
+const articles: Article[] = parseArticles(posts);
+const timeSortedArticles = articles.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
+---
+
+<div class="article-group">
+  {
+    timeSortedArticles.map((a) => (
+      <div class="article-block">
+        <ArticleItem article={a} />
+      </div>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  .article-group {
+    @apply w-full flex flex-wrap;
+
+    .article-block {
+      @apply flex w-1/3;
+    }
+  }
+</style>

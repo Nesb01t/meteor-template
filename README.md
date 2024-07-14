@@ -15,7 +15,6 @@ git submodule sync
 git submodule update --init --recursive
 ```
 
-
 ## 更新文章
 
 在子模块仓库提交后，一次性更新所有子模块即可

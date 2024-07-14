@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { article } = Astro.props;
+---
+
+<div class="article-list-item">
+  <div class="tooltip ml-2 max-w-[calc(100%-70px)]" data-tip="点击跳转">
+    <a class="flex btn btn-ghost btn-sm" href={'/article/' + article.title}>
+      <div class="text-sm w-full flex gap-2 items-center">
+        <div>
+          <Icon name="mingcute:play-fill" size={10} />
+        </div>
+        <span class="truncate">{article.title}</span>
+      </div>
+      <!--<div class="badge badge-ghost badge-sm">{article.tag}</div>-->
+    </a>
+  </div>
+  <div class="release-date">
+    {article.date}
+  </div>
+</div>
+
+<style>
+    .article-list-item {
+        @apply text-sm;
+        @apply flex items-center h-[45px] w-full;
+    }
+
+    .release-date {
+        @apply ml-auto text-xs text-primary-focus cursor-default;
+    }
+</style>

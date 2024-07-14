@@ -40,15 +40,17 @@ if (frontmatter) {
 <BaseLayout>
   <div class="flex items-center mb-4 gap-1.5">
     <div class="tooltip" data-tip="返回 Article 页面">
-      <a href="/article">
-        <Icon :size="16" name="mage:l-arrow-up-left" />
+      <a class="text-lg" href="/articles">
+        <Icon :size="24" name="mage:l-arrow-up-left" />
       </a>
     </div>
     <h1 class="text-3xl font-bold">{title}</h1>
   </div>
+
   <div class="text-gray-500 mb-4 flex items-center">
     <div class="badge badge-ghost badge-sm">{tag}</div>
   </div>
+
   <div class="article">
     <div class="card-body">
       <Content />
@@ -57,12 +59,12 @@ if (frontmatter) {
 </BaseLayout>
 
 <style>
-  .article {
-    @apply w-full card shadow-xl rounded-xl;
-  }
+    .article {
+        @apply w-full card shadow-xl rounded-xl;
+    }
 
-  .card-body {
-    @apply shadow-sm rounded-xl;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
+    .card-body {
+        @apply shadow-sm rounded-xl;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
 </style>
