@@ -8,16 +8,34 @@
       }
     ],
     "target": "ES2022",
-    "baseUrl": ".",
+    "baseUrl": "/home/nes/code/meteor-template",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@content/*": ["src/content/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@utils/*": ["src/utils/*"],
-      "@assets/*": ["src/assets/*"],
-      "@badge/*": ["src/components/badge-set/*"],
-      "@article/*": ["article/*"]
-    }
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@content/*": [
+        "src/content/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@badge/*": [
+        "src/components/badge-set/*"
+      ],
+      "@article/*": [
+        "article/*"
+      ]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }

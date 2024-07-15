@@ -1,34 +1,47 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+const pageSets = [
+  {
+    href: '/articles-classified',
+    icon: 'mage:three-d-box-square-fill',
+    title: '笔记分类',
+  },
+  {
+    href: '/articles',
+    icon: 'mage:folder-2-fill',
+    title: '笔记列表',
+  },
+  {
+    href: '/project',
+    icon: 'mage:box-3d-fill',
+    title: '项目',
+  },
+  {
+    href: '/',
+    icon: 'mage:water-drop-fill',
+    title: '关于',
+  },
+];
 ---
 
 <div class="navbar">
   <div class="navbar-content">
-    <div class="flex-1">
-      <a class="btn btn-ghost" href="/">
-        <Icon class="text-[22px]" name="mage:note-fill" />
-        <span class="navbar__title">博客 nesb01t</span>
-        <!-- <div class="navbar__subtitle">web & game buffs</div> -->
+    <div class="flex items-center w-full">
+      <a href="/" class="btn btn-ghost flex items-center">
+        <Icon name="mage:note-fill" size="24" />
+        <div class="navbar__title">博客 nesb01t</div>
+        <div class="navbar__subtitle">一些学习笔记</div>
       </a>
-    </div>
-    <div class="flex-none gap-2">
-      <div class="tooltip tooltip-bottom" data-tip="博客列表">
-        <a class="btn btn-ghost" href="/articles">
-          <Icon name="mage:folder-2-fill" />
-           笔记列表</a
-        >
-      </div>
-      <div class="tooltip tooltip-bottom" data-tip="项目列表">
-        <a class="btn btn-ghost" href="/project">
-          <Icon name="mage:box-3d-fill" />
-           项目</a
-        >
-      </div>
-      <div class="tooltip tooltip-bottom" data-tip="关于我">
-        <a class="btn btn-ghost" href="/">
-          <Icon name="mage:water-drop-fill" />
-           关于</a
-        >
+      <div class="ml-auto flex gap-2 items-center">
+        {
+          pageSets.map((page, index) => (
+            <a href={page.href} class="btn btn-ghost flex items-center">
+              <Icon name={page.icon} size="20" />
+              <span>{page.title}</span>
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -37,10 +50,10 @@ import { Icon } from 'astro-icon/components';
 <style lang="scss">
   .navbar {
     @apply h-[50px];
-    @apply flex justify-center p-0;
+    @apply flex justify-center;
 
     &-content {
-      @apply w-[1200px];
+      @apply min-w-[1200px] px-5 mt-2;
       @apply backdrop-blur;
     }
 

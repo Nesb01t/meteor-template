@@ -1,5 +1,29 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+const linkSets = [
+  {
+    icon: 'mingcute:github-fill',
+    name: 'GitHub',
+    link: 'https://github.com/nesb01t'
+  },
+  {
+    icon: 'mingcute:star-fill',
+    name: 'EachStar',
+    link: 'https://each-star.com'
+  },
+  {
+    icon: 'mingcute:bookmarks-fill',
+    name: 'Juejin',
+    link: 'https://juejin.cn/user/1128536414880599'
+  },
+  //https://www.superbed.cn/
+  {
+    icon: 'mingcute:pic-fill',
+    name: 'Superbed',
+    link: 'https://www.superbed.cn/'
+  },
+]
 ---
 
 <div class="footer">
@@ -15,26 +39,14 @@ import { Icon } from 'astro-icon/components';
       <div>social links</div>
       <div>websites</div>
     </div>
-    <div class="footer-sites__item">
-      <Icon name="mingcute:github-fill" size={27} />
-      <div>GitHub</div>
-    </div>
-    <div class="footer-sites__item">
-      <Icon name="mingcute:star-fill" size={27} />
-      <div>EachStar</div>
-    </div>
-    <div class="footer-sites__item">
-      <Icon name="mingcute:bookmarks-fill" size={27} />
-      <div>Juejin</div>
-    </div>
-    <div class="footer-sites__item">
-      <Icon name="mingcute:qq-fill" size={27} />
-      <div>QQ</div>
-    </div>
-    <div class="footer-sites__item">
-      <Icon name="line-md:reddit-loop" size={27} />
-      <div>Reddit</div>
-    </div>
+    {
+      linkSets.map((link) => (
+        <a href={link.link} class="footer-sites__item" target="_blank">
+          <Icon name={link.icon} size="24" />
+          <div>{link.name}</div>
+        </a>
+      ))
+    }
   </div>
 </div>
 
@@ -45,11 +57,11 @@ import { Icon } from 'astro-icon/components';
 
     color: #aaa;
     background: repeating-linear-gradient(
-      45deg,
-      #222,
-      #222 10px,
-      #111 10px,
-      #111 20px
+                    45deg,
+                    #222,
+                    #222 10px,
+                    #111 10px,
+                    #111 20px
     );
 
     &-meteor {

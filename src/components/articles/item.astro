@@ -5,7 +5,7 @@ const { article } = Astro.props;
 ---
 
 <div class="article-list-item">
-  <div class="tooltip ml-2 max-w-[calc(100%-70px)]" data-tip="点击跳转">
+  <div class="tooltip max-w-[calc(100%-70px)]" data-tip="点击跳转">
     <a class="flex btn btn-ghost btn-sm" href={'/article/' + article.title}>
       <div class="text-sm w-full flex gap-2 items-center">
         <div>
@@ -24,6 +24,7 @@ const { article } = Astro.props;
 <style>
     .article-list-item {
         @apply text-sm;
+        @apply text-[#333];
         @apply flex items-center h-[45px] w-full;
     }
 
