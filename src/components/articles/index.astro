@@ -7,24 +7,24 @@ import { Icon } from "astro-icon/components"
 <div class="flex items-center gap-4">
   <button
     class="btn rounded-lg flex items-center"
-    onClick='
+    onclick='
       document.getElementById("articles-group").style.display = "none";
       document.getElementById("articles-list").style.display = "flex";
     '>
     <span class="flex items-center gap-2">
-      <Icon size="20" name="mingcute:tag-line" />
+      <Icon size={20} name="mingcute:tag-line" />
       <span>根据标签排序</span>
     </span>
   </button>
 
   <button
     class="btn rounded-lg "
-    onClick='
+    onclick='
       document.getElementById("articles-group").style.display = "flex";
       document.getElementById("articles-list").style.display = "none";
     '>
     <span class="flex items-center gap-2">
-      <Icon size="20" name="mingcute:time-line" />
+      <Icon size={20} name="mingcute:time-line" />
       <span>根据时间排序</span>
     </span>
   </button>

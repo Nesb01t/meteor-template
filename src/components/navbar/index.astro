@@ -19,7 +19,7 @@ const pageSets = [
   <div class="navbar-content">
     <div class="flex items-center w-full">
       <a href="/" class="btn btn-ghost flex items-center">
-        <Icon name="mage:note-fill" size="24" />
+        <Icon name="mage:note-fill" size={24} />
         <div class="navbar__title">博客 nesb01t</div>
         <div class="navbar__subtitle">一些学习笔记</div>
       </a>
@@ -27,7 +27,7 @@ const pageSets = [
         {
           pageSets.map((page, index) => (
             <a href={page.href} class="btn btn-ghost flex items-center">
-              <Icon name={page.icon} size="20" />
+              <Icon name={page.icon} size={20} />
               <span>{page.title}</span>
             </a>
           ))
