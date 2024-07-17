@@ -37,8 +37,8 @@ import Appstore from '../badge-set/appstore.astro';
 import Deno from '../badge-set/deno.astro';
 ---
 
-<div class="w-full flex flex-col items-center gap-4">
-  <div class="card-hero"><Web />Web & 前后端</div>
+<div class="w-full flex flex-col items-center gap-6">
+  <div class="text-3xl mt-24 mb-4 font-semibold">Demos & 项目</div>
   <CardHero title="EachStar 创作互助平台" img={ImgHaven}>
     <Fragment slot="content">
       <div>
@@ -146,7 +146,6 @@ import Deno from '../badge-set/deno.astro';
     </Fragment>
   </CardHero>
 
-  <div class="card-hero"><Appstore />APP & 客户端</div>
   <CardHero title="Almuni Desktop 校友录 (Desktop)" img={ImgZustCloud}>
     <Fragment slot="content">
       <div>🥼 一个校内 APP 的 tauri + react + vite + daisy-ui 桌面端版本</div>
@@ -192,7 +191,6 @@ import Deno from '../badge-set/deno.astro';
     </Fragment>
   </CardHero>
 
-  <div class="card-hero"><Deno />Addon & 插件</div>
   <CardHero title="FF14 Dalamud 卫月插件" img={ImgDalamud}>
     <Fragment slot="content">
       <div>
