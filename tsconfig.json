@@ -8,7 +8,7 @@
       }
     ],
     "target": "ES2022",
-    "baseUrl": "/home/nes/code/meteor-template",
+    "baseUrl": ".",
     "paths": {
       "@components/*": [
         "src/components/*"
