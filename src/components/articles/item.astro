@@ -1,19 +1,21 @@
 ---
 import { Icon } from 'astro-icon/components';
+import Badge from '../badge/badge-icon.astro';
 
-const { article } = Astro.props;
+const { article, showBadge } = Astro.props;
 ---
 
 <div class="article-list-item">
   <div class="tooltip max-w-[calc(100%-70px)]" data-tip="点击跳转">
     <a class="flex btn btn-ghost btn-sm" href={'/article/' + article.title}>
       <div class="text-sm w-full flex gap-2 items-center">
-        <div>
-          <Icon name="mingcute:play-fill" size={10} />
+        <div style={{
+          display: showBadge ? 'block' : 'none',
+        }} class="w-[30px] flex items-center justify-center">
+          <Badge size={28} name={article.tag}></Badge>
         </div>
         <span class="truncate">{article.title}</span>
       </div>
-      <!--<div class="badge badge-ghost badge-sm">{article.tag}</div>-->
     </a>
   </div>
   <div class="release-date">

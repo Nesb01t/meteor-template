@@ -1,0 +1,149 @@
+---
+import { Badge } from '../badge';
+import { Icon } from 'astro-icon/components';
+import BadgeIcon from '@components/badge/badge-icon.astro';
+
+const blocks = [
+  {
+    name: 'Web 框架',
+    list: [
+      'nuxtjs',
+      'vue',
+      'vueuse',
+      'nextjs',
+      'react',
+      'svelte',
+      'hexo',
+      'astro',
+    ],
+  },
+  {
+    name: 'Web 设计',
+    list: [
+      'element',
+      'antd',
+      'headless',
+      'd3js',
+      'threejs',
+      'tailwind',
+      'sass',
+      'animejs',
+      'gis',
+    ],
+  },
+  {
+    name: '客户端',
+    list: [
+      'electron',
+      'tauri',
+      'ionic',
+      'capacitor',
+      'flutter',
+      'unity',
+      'unreal',
+      'avalonia',
+      'win32api',
+    ],
+  },
+  {
+    name: 'BFF / 质量',
+    list: [
+      'nodejs',
+      'nestjs',
+      'ktor',
+      'vite',
+      'vitest',
+      'jest',
+      'eslint',
+      'prettier',
+      'postgresql',
+    ],
+  },
+  {
+    name: '工具 / 开发',
+    list: [
+      'blender',
+      'extension',
+      'git',
+      'docker',
+      'jenkins',
+      'github',
+      'figma',
+      'postman',
+    ],
+  },
+  {
+    name: '常用软件',
+    list: [
+      'notion',
+      'obsidian',
+      'codepen',
+      'code',
+    ],
+  },
+  {
+    name: '常用语言',
+    list: [
+      'typescript',
+      'c#',
+      'kotlin',
+      'python',
+      'lua',
+    ],
+  },
+];
+---
+<div class="tech-stack relative overflow-hidden">
+  <!-- 标题 -->
+  <h2 class="flex items-center gap-2">
+    <Icon name="mingcute:box-3-fill" size={28} />
+    技术栈
+    <Badge name="vue"></Badge>
+  </h2>
+  <div class="absolute bottom-[-60px] right-[-92px]">
+    <Icon
+      name="line-md:loading-twotone-loop"
+      size={170}
+      class="anime-color"
+    />
+  </div>
+  <div>日常使用技术栈及辅助工具 / 软件</div>
+
+  <!-- 格子 -->
+  <div class="tech-stack__block">
+    {blocks.map((block) => (
+      <div class="apps">
+        <div class="apps-title">{block.name}</div>
+        {block.list.map((item) => (
+          <div class="apps-item">
+            <BadgeIcon size="18" name={item} />
+            {item}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style lang="scss">
+  .tech-stack {
+    @apply p-6 rounded-xl;
+    background: linear-gradient(90deg, #e7f3d8bf 0%, #bbf0ff99 100%);
+
+    &__block {
+      @apply p-4 flex flex-wrap gap-[60px];
+    }
+  }
+
+  .apps {
+    @apply flex flex-col gap-[6px];
+
+    &-title {
+      @apply text-lg font-semibold my-2;
+    }
+
+    &-item {
+      @apply flex justify-between items-center gap-1 text-sm w-[90px];
+    }
+  }
+</style>

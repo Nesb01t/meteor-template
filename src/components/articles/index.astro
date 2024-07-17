@@ -1,13 +1,48 @@
 ---
 import ItemGroup from './group.astro';
+import ItemList from './list.astro';
+import { Icon } from "astro-icon/components"
 ---
 
-<div class="article-list">
+<div class="flex items-center gap-4">
+  <button
+    class="btn rounded-lg flex items-center"
+    onClick='
+      document.getElementById("articles-group").style.display = "none";
+      document.getElementById("articles-list").style.display = "flex";
+    '>
+    <span class="flex items-center gap-2">
+      <Icon size="20" name="mingcute:tag-line" />
+      <span>根据标签排序</span>
+    </span>
+  </button>
+
+  <button
+    class="btn rounded-lg "
+    onClick='
+      document.getElementById("articles-group").style.display = "flex";
+      document.getElementById("articles-list").style.display = "none";
+    '>
+    <span class="flex items-center gap-2">
+      <Icon size="20" name="mingcute:time-line" />
+      <span>根据时间排序</span>
+    </span>
+  </button>
+</div>
+
+<div id="articles-group" class="articles-group">
   <ItemGroup />
+</div>
+<div id="articles-list" class="articles-list">
+  <ItemList />
 </div>
 
 <style lang="scss">
-  .article-list {
-    @apply bg-purple-50 bg-opacity-50 rounded-xl gap-2 flex flex-wrap items-start w-full;
+  .articles-group {
+    @apply hidden bg-purple-50 bg-opacity-10 rounded-xl gap-2 flex-wrap items-start w-full;
+  }
+
+  .articles-list {
+    @apply flex;
   }
 </style>
